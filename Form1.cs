@@ -15,6 +15,7 @@ namespace Projet_Quizz
         public Form1()
         {
             InitializeComponent();
+            //sss
         }
     }
 }
