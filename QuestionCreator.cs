@@ -19,6 +19,7 @@ namespace Projet_Quizz
             FolderBrowserDialog fdb = new FolderBrowserDialog();
             DialogResult result = fdb.ShowDialog();
             MessageBox.Show(result.ToString());
+
         }
     }
 }
