@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Projet_Quizz
 {
-    public partial class Form1 : Form
+    public partial class QuestionCreator : Form
     {
-        public Form1()
+        public QuestionCreator()
         {
             InitializeComponent();
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            QuestionCreator QC = new QuestionCreator();
-            QC.ShowDialog();
         }
     }
 }
