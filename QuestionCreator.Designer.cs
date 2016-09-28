@@ -39,6 +39,10 @@
             this.rdb_CorrectAnswer3 = new System.Windows.Forms.RadioButton();
             this.gb_Answer4 = new System.Windows.Forms.GroupBox();
             this.rdb_CorrectAnswer4 = new System.Windows.Forms.RadioButton();
+            this.lbl_AnswerType = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gb_Answer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Question
@@ -55,11 +59,13 @@
             this.tbx_Question.Location = new System.Drawing.Point(12, 25);
             this.tbx_Question.Multiline = true;
             this.tbx_Question.Name = "tbx_Question";
-            this.tbx_Question.Size = new System.Drawing.Size(297, 69);
+            this.tbx_Question.Size = new System.Drawing.Size(471, 112);
             this.tbx_Question.TabIndex = 1;
             // 
             // gb_Answer1
             // 
+            this.gb_Answer1.Controls.Add(this.label1);
+            this.gb_Answer1.Controls.Add(this.textBox1);
             this.gb_Answer1.Location = new System.Drawing.Point(15, 166);
             this.gb_Answer1.Name = "gb_Answer1";
             this.gb_Answer1.Size = new System.Drawing.Size(231, 318);
@@ -73,7 +79,7 @@
             this.cmb_QuestType.Items.AddRange(new object[] {
             "Text",
             "Images"});
-            this.cmb_QuestType.Location = new System.Drawing.Point(736, 60);
+            this.cmb_QuestType.Location = new System.Drawing.Point(736, 25);
             this.cmb_QuestType.Name = "cmb_QuestType";
             this.cmb_QuestType.Size = new System.Drawing.Size(221, 21);
             this.cmb_QuestType.TabIndex = 0;
@@ -81,11 +87,10 @@
             // rdb_CorrectAnswer2
             // 
             this.rdb_CorrectAnswer2.AutoSize = true;
-            this.rdb_CorrectAnswer2.Location = new System.Drawing.Point(331, 143);
+            this.rdb_CorrectAnswer2.Location = new System.Drawing.Point(312, 143);
             this.rdb_CorrectAnswer2.Name = "rdb_CorrectAnswer2";
             this.rdb_CorrectAnswer2.Size = new System.Drawing.Size(65, 17);
             this.rdb_CorrectAnswer2.TabIndex = 0;
-            this.rdb_CorrectAnswer2.TabStop = true;
             this.rdb_CorrectAnswer2.Text = "Correcte";
             this.rdb_CorrectAnswer2.UseVisualStyleBackColor = true;
             // 
@@ -101,7 +106,8 @@
             // rdb_CorrectAnswer1
             // 
             this.rdb_CorrectAnswer1.AutoSize = true;
-            this.rdb_CorrectAnswer1.Location = new System.Drawing.Point(89, 143);
+            this.rdb_CorrectAnswer1.Checked = true;
+            this.rdb_CorrectAnswer1.Location = new System.Drawing.Point(74, 143);
             this.rdb_CorrectAnswer1.Name = "rdb_CorrectAnswer1";
             this.rdb_CorrectAnswer1.Size = new System.Drawing.Size(65, 17);
             this.rdb_CorrectAnswer1.TabIndex = 0;
@@ -121,11 +127,10 @@
             // rdb_CorrectAnswer3
             // 
             this.rdb_CorrectAnswer3.AutoSize = true;
-            this.rdb_CorrectAnswer3.Location = new System.Drawing.Point(568, 143);
+            this.rdb_CorrectAnswer3.Location = new System.Drawing.Point(548, 143);
             this.rdb_CorrectAnswer3.Name = "rdb_CorrectAnswer3";
             this.rdb_CorrectAnswer3.Size = new System.Drawing.Size(65, 17);
             this.rdb_CorrectAnswer3.TabIndex = 0;
-            this.rdb_CorrectAnswer3.TabStop = true;
             this.rdb_CorrectAnswer3.Text = "Correcte";
             this.rdb_CorrectAnswer3.UseVisualStyleBackColor = true;
             // 
@@ -141,19 +146,45 @@
             // rdb_CorrectAnswer4
             // 
             this.rdb_CorrectAnswer4.AutoSize = true;
-            this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(806, 143);
+            this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(783, 143);
             this.rdb_CorrectAnswer4.Name = "rdb_CorrectAnswer4";
             this.rdb_CorrectAnswer4.Size = new System.Drawing.Size(65, 17);
             this.rdb_CorrectAnswer4.TabIndex = 0;
-            this.rdb_CorrectAnswer4.TabStop = true;
             this.rdb_CorrectAnswer4.Text = "Correcte";
             this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
+            // 
+            // lbl_AnswerType
+            // 
+            this.lbl_AnswerType.AutoSize = true;
+            this.lbl_AnswerType.Location = new System.Drawing.Point(733, 9);
+            this.lbl_AnswerType.Name = "lbl_AnswerType";
+            this.lbl_AnswerType.Size = new System.Drawing.Size(92, 13);
+            this.lbl_AnswerType.TabIndex = 4;
+            this.lbl_AnswerType.Text = "Type de réponses";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 32);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(219, 40);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Une réponse :";
             // 
             // QuestionCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 496);
+            this.Controls.Add(this.lbl_AnswerType);
             this.Controls.Add(this.rdb_CorrectAnswer4);
             this.Controls.Add(this.rdb_CorrectAnswer3);
             this.Controls.Add(this.rdb_CorrectAnswer2);
@@ -167,6 +198,8 @@
             this.Controls.Add(this.lbl_Question);
             this.Name = "QuestionCreator";
             this.Text = "QuestionCreator";
+            this.gb_Answer1.ResumeLayout(false);
+            this.gb_Answer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +218,8 @@
         private System.Windows.Forms.RadioButton rdb_CorrectAnswer3;
         private System.Windows.Forms.GroupBox gb_Answer4;
         private System.Windows.Forms.RadioButton rdb_CorrectAnswer4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_AnswerType;
+        private System.Windows.Forms.Label label1;
     }
 }

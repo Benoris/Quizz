@@ -15,6 +15,10 @@ namespace Projet_Quizz
         public QuestionCreator()
         {
             InitializeComponent();
+            cmb_QuestType.SelectedIndex = 0;
+            FolderBrowserDialog fdb = new FolderBrowserDialog();
+            DialogResult result = fdb.ShowDialog();
+            MessageBox.Show(result.ToString());
         }
     }
 }
