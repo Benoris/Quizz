@@ -30,6 +30,7 @@
         {
             this.btn_Play = new System.Windows.Forms.Button();
             this.btn_ShowCreator = new System.Windows.Forms.Button();
+            this.btn_Score = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Play
@@ -52,11 +53,22 @@
             this.btn_ShowCreator.UseVisualStyleBackColor = true;
             this.btn_ShowCreator.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btn_Score
+            // 
+            this.btn_Score.Location = new System.Drawing.Point(179, 110);
+            this.btn_Score.Name = "btn_Score";
+            this.btn_Score.Size = new System.Drawing.Size(86, 34);
+            this.btn_Score.TabIndex = 2;
+            this.btn_Score.Text = "Score";
+            this.btn_Score.UseVisualStyleBackColor = true;
+            this.btn_Score.Click += new System.EventHandler(this.btn_Score_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 123);
+            this.ClientSize = new System.Drawing.Size(477, 180);
+            this.Controls.Add(this.btn_Score);
             this.Controls.Add(this.btn_ShowCreator);
             this.Controls.Add(this.btn_Play);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btn_Play;
         private System.Windows.Forms.Button btn_ShowCreator;
+        private System.Windows.Forms.Button btn_Score;
     }
 }
 

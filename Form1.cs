@@ -29,5 +29,11 @@ namespace Projet_Quizz
             Jeux J = new Jeux();
             J.ShowDialog();
         }
+
+        private void btn_Score_Click(object sender, EventArgs e)
+        {
+            Score Score = new Score();
+            Score.ShowDialog();
+        }
     }
 }
