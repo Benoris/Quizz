@@ -23,5 +23,11 @@ namespace Projet_Quizz
             QuestionCreator QC = new QuestionCreator();
             QC.ShowDialog();
         }
+
+        private void btn_Play_Click(object sender, EventArgs e)
+        {
+            Jeux J = new Jeux();
+            J.ShowDialog();
+        }
     }
 }

@@ -40,6 +40,7 @@
             this.btn_Play.TabIndex = 0;
             this.btn_Play.Text = "Jouer";
             this.btn_Play.UseVisualStyleBackColor = true;
+            this.btn_Play.Click += new System.EventHandler(this.btn_Play_Click);
             // 
             // btn_ShowCreator
             // 
