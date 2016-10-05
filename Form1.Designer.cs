@@ -34,18 +34,18 @@
             // 
             // btn_Play
             // 
-            this.btn_Play.Location = new System.Drawing.Point(211, 110);
+            this.btn_Play.Location = new System.Drawing.Point(78, 35);
             this.btn_Play.Name = "btn_Play";
-            this.btn_Play.Size = new System.Drawing.Size(75, 23);
+            this.btn_Play.Size = new System.Drawing.Size(86, 34);
             this.btn_Play.TabIndex = 0;
             this.btn_Play.Text = "Jouer";
             this.btn_Play.UseVisualStyleBackColor = true;
             // 
             // btn_ShowCreator
             // 
-            this.btn_ShowCreator.Location = new System.Drawing.Point(369, 12);
+            this.btn_ShowCreator.Location = new System.Drawing.Point(254, 35);
             this.btn_ShowCreator.Name = "btn_ShowCreator";
-            this.btn_ShowCreator.Size = new System.Drawing.Size(185, 23);
+            this.btn_ShowCreator.Size = new System.Drawing.Size(185, 34);
             this.btn_ShowCreator.TabIndex = 1;
             this.btn_ShowCreator.Text = "Afficher le créateur de questions";
             this.btn_ShowCreator.UseVisualStyleBackColor = true;
@@ -55,11 +55,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 263);
+            this.ClientSize = new System.Drawing.Size(477, 123);
             this.Controls.Add(this.btn_ShowCreator);
             this.Controls.Add(this.btn_Play);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Quizz";
             this.ResumeLayout(false);
 
         }
