@@ -170,32 +170,6 @@
             this.rdb_CorrectAnswer4.Text = "Correcte";
             this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
             // 
-            // lbl_AnswerType
-            // 
-            this.lbl_AnswerType.AutoSize = true;
-            this.lbl_AnswerType.Location = new System.Drawing.Point(733, 9);
-            this.lbl_AnswerType.Name = "lbl_AnswerType";
-            this.lbl_AnswerType.Size = new System.Drawing.Size(92, 13);
-            this.lbl_AnswerType.TabIndex = 4;
-            this.lbl_AnswerType.Text = "Type de réponses";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 40);
-            this.textBox1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Une réponse :";
-            // 
             this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(806, 143);
             this.rdb_CorrectAnswer4.Name = "rdb_CorrectAnswer4";
             this.rdb_CorrectAnswer4.Size = new System.Drawing.Size(65, 17);
@@ -246,7 +220,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 589);
-            this.Controls.Add(this.lbl_AnswerType);
             this.Controls.Add(this.rdb_CorrectAnswer4);
             this.Controls.Add(this.rdb_CorrectAnswer3);
             this.Controls.Add(this.rdb_CorrectAnswer2);
