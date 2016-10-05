@@ -16,9 +16,18 @@ namespace Projet_Quizz
         {
             InitializeComponent();
             cmb_QuestType.SelectedIndex = 0;
-            FolderBrowserDialog fdb = new FolderBrowserDialog();
-            DialogResult result = fdb.ShowDialog();
-            MessageBox.Show(result.ToString());
+        }
+
+        private void btn_OpenImage1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Images BMP (*.bmp)|*.bmp|Images PNG (*.png)|*.png|Images JPG(*.jpg)|*.jpg";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pb_Rep1.Image = Image.FromFile(dlg.FileName);
+            }
+            dlg.Dispose();
         }
     }
 }
