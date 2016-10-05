@@ -16,5 +16,6 @@ namespace Projet_Quizz
         {
             InitializeComponent();
         }
+
     }
 }
