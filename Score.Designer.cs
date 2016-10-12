@@ -37,15 +37,15 @@
             // lbx_ListeJoueur
             // 
             this.lbx_ListeJoueur.FormattingEnabled = true;
-            this.lbx_ListeJoueur.Location = new System.Drawing.Point(12, 45);
+            this.lbx_ListeJoueur.Location = new System.Drawing.Point(12, 32);
             this.lbx_ListeJoueur.Name = "lbx_ListeJoueur";
-            this.lbx_ListeJoueur.Size = new System.Drawing.Size(179, 264);
+            this.lbx_ListeJoueur.Size = new System.Drawing.Size(179, 277);
             this.lbx_ListeJoueur.TabIndex = 0;
             // 
             // lbl_ListeJoueur
             // 
             this.lbl_ListeJoueur.AutoSize = true;
-            this.lbl_ListeJoueur.Location = new System.Drawing.Point(39, 29);
+            this.lbl_ListeJoueur.Location = new System.Drawing.Point(39, 9);
             this.lbl_ListeJoueur.Name = "lbl_ListeJoueur";
             this.lbl_ListeJoueur.Size = new System.Drawing.Size(97, 13);
             this.lbl_ListeJoueur.TabIndex = 2;
@@ -54,26 +54,28 @@
             // lbl_Score
             // 
             this.lbl_Score.AutoSize = true;
+            this.lbl_Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Score.Location = new System.Drawing.Point(211, 101);
             this.lbl_Score.Name = "lbl_Score";
-            this.lbl_Score.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Score.Size = new System.Drawing.Size(59, 20);
             this.lbl_Score.TabIndex = 3;
             this.lbl_Score.Text = "Score :";
             // 
             // lbl_NumScore
             // 
             this.lbl_NumScore.AutoSize = true;
-            this.lbl_NumScore.Location = new System.Drawing.Point(258, 101);
+            this.lbl_NumScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NumScore.Location = new System.Drawing.Point(288, 101);
             this.lbl_NumScore.Name = "lbl_NumScore";
-            this.lbl_NumScore.Size = new System.Drawing.Size(41, 13);
+            this.lbl_NumScore.Size = new System.Drawing.Size(42, 20);
             this.lbl_NumScore.TabIndex = 4;
-            this.lbl_NumScore.Text = "Score :";
+            this.lbl_NumScore.Text = "Num";
             // 
             // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 331);
+            this.ClientSize = new System.Drawing.Size(350, 331);
             this.Controls.Add(this.lbl_NumScore);
             this.Controls.Add(this.lbl_Score);
             this.Controls.Add(this.lbl_ListeJoueur);
