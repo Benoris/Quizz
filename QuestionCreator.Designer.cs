@@ -56,6 +56,7 @@
             this.tbx_Rep4 = new System.Windows.Forms.TextBox();
             this.pb_Rep4 = new System.Windows.Forms.PictureBox();
             this.rdb_CorrectAnswer4 = new System.Windows.Forms.RadioButton();
+            this.btn_AddQuestion = new System.Windows.Forms.Button();
             this.gb_Answer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep1)).BeginInit();
             this.gb_Answer2.SuspendLayout();
@@ -171,7 +172,7 @@
             // 
             // btn_OpenImage2
             // 
-            this.btn_OpenImage2.Location = new System.Drawing.Point(9, 95);
+            this.btn_OpenImage2.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage2.Name = "btn_OpenImage2";
             this.btn_OpenImage2.Size = new System.Drawing.Size(115, 23);
             this.btn_OpenImage2.TabIndex = 7;
@@ -181,7 +182,7 @@
             // lbl_Rep2
             // 
             this.lbl_Rep2.AutoSize = true;
-            this.lbl_Rep2.Location = new System.Drawing.Point(6, 11);
+            this.lbl_Rep2.Location = new System.Drawing.Point(6, 16);
             this.lbl_Rep2.Name = "lbl_Rep2";
             this.lbl_Rep2.Size = new System.Drawing.Size(56, 13);
             this.lbl_Rep2.TabIndex = 6;
@@ -189,7 +190,7 @@
             // 
             // tbx_Rep2
             // 
-            this.tbx_Rep2.Location = new System.Drawing.Point(6, 26);
+            this.tbx_Rep2.Location = new System.Drawing.Point(6, 31);
             this.tbx_Rep2.Multiline = true;
             this.tbx_Rep2.Name = "tbx_Rep2";
             this.tbx_Rep2.Size = new System.Drawing.Size(219, 55);
@@ -198,7 +199,7 @@
             // pb_Rep2
             // 
             this.pb_Rep2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Rep2.Location = new System.Drawing.Point(6, 124);
+            this.pb_Rep2.Location = new System.Drawing.Point(6, 129);
             this.pb_Rep2.Name = "pb_Rep2";
             this.pb_Rep2.Size = new System.Drawing.Size(219, 276);
             this.pb_Rep2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +233,7 @@
             // 
             // btn_OpenImage3
             // 
-            this.btn_OpenImage3.Location = new System.Drawing.Point(9, 95);
+            this.btn_OpenImage3.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage3.Name = "btn_OpenImage3";
             this.btn_OpenImage3.Size = new System.Drawing.Size(115, 23);
             this.btn_OpenImage3.TabIndex = 7;
@@ -242,7 +243,7 @@
             // lbl_Rep3
             // 
             this.lbl_Rep3.AutoSize = true;
-            this.lbl_Rep3.Location = new System.Drawing.Point(6, 11);
+            this.lbl_Rep3.Location = new System.Drawing.Point(6, 16);
             this.lbl_Rep3.Name = "lbl_Rep3";
             this.lbl_Rep3.Size = new System.Drawing.Size(56, 13);
             this.lbl_Rep3.TabIndex = 6;
@@ -250,7 +251,7 @@
             // 
             // tbx_Rep3
             // 
-            this.tbx_Rep3.Location = new System.Drawing.Point(6, 26);
+            this.tbx_Rep3.Location = new System.Drawing.Point(6, 31);
             this.tbx_Rep3.Multiline = true;
             this.tbx_Rep3.Name = "tbx_Rep3";
             this.tbx_Rep3.Size = new System.Drawing.Size(219, 55);
@@ -259,7 +260,7 @@
             // pb_Rep3
             // 
             this.pb_Rep3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Rep3.Location = new System.Drawing.Point(6, 124);
+            this.pb_Rep3.Location = new System.Drawing.Point(6, 129);
             this.pb_Rep3.Name = "pb_Rep3";
             this.pb_Rep3.Size = new System.Drawing.Size(219, 276);
             this.pb_Rep3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +293,7 @@
             // 
             // btn_OpenImage4
             // 
-            this.btn_OpenImage4.Location = new System.Drawing.Point(9, 95);
+            this.btn_OpenImage4.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage4.Name = "btn_OpenImage4";
             this.btn_OpenImage4.Size = new System.Drawing.Size(115, 23);
             this.btn_OpenImage4.TabIndex = 7;
@@ -302,7 +303,7 @@
             // lbl_Rep4
             // 
             this.lbl_Rep4.AutoSize = true;
-            this.lbl_Rep4.Location = new System.Drawing.Point(6, 11);
+            this.lbl_Rep4.Location = new System.Drawing.Point(6, 16);
             this.lbl_Rep4.Name = "lbl_Rep4";
             this.lbl_Rep4.Size = new System.Drawing.Size(56, 13);
             this.lbl_Rep4.TabIndex = 6;
@@ -310,7 +311,7 @@
             // 
             // tbx_Rep4
             // 
-            this.tbx_Rep4.Location = new System.Drawing.Point(6, 26);
+            this.tbx_Rep4.Location = new System.Drawing.Point(6, 31);
             this.tbx_Rep4.Multiline = true;
             this.tbx_Rep4.Name = "tbx_Rep4";
             this.tbx_Rep4.Size = new System.Drawing.Size(219, 55);
@@ -319,7 +320,7 @@
             // pb_Rep4
             // 
             this.pb_Rep4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Rep4.Location = new System.Drawing.Point(6, 124);
+            this.pb_Rep4.Location = new System.Drawing.Point(6, 129);
             this.pb_Rep4.Name = "pb_Rep4";
             this.pb_Rep4.Size = new System.Drawing.Size(219, 276);
             this.pb_Rep4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -337,11 +338,23 @@
             this.rdb_CorrectAnswer4.Text = "Correcte";
             this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
             // 
+            // btn_AddQuestion
+            // 
+            this.btn_AddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_AddQuestion.Location = new System.Drawing.Point(15, 584);
+            this.btn_AddQuestion.Name = "btn_AddQuestion";
+            this.btn_AddQuestion.Size = new System.Drawing.Size(936, 34);
+            this.btn_AddQuestion.TabIndex = 4;
+            this.btn_AddQuestion.Text = "Ajouter question";
+            this.btn_AddQuestion.UseVisualStyleBackColor = true;
+            this.btn_AddQuestion.Click += new System.EventHandler(this.btn_AddQuestion_Click);
+            // 
             // QuestionCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 589);
+            this.ClientSize = new System.Drawing.Size(968, 630);
+            this.Controls.Add(this.btn_AddQuestion);
             this.Controls.Add(this.rdb_CorrectAnswer4);
             this.Controls.Add(this.rdb_CorrectAnswer3);
             this.Controls.Add(this.rdb_CorrectAnswer2);
@@ -402,5 +415,6 @@
         private System.Windows.Forms.Label lbl_Rep4;
         private System.Windows.Forms.TextBox tbx_Rep4;
         private System.Windows.Forms.PictureBox pb_Rep4;
+        private System.Windows.Forms.Button btn_AddQuestion;
     }
 }

@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+//
 using System.Data;
+using System.Data.SqlClient;
+//using MySql.Data;
+//using MySql.Data.SqlClient;
+//
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +19,7 @@ namespace Projet_Quizz
     {
 
         List<TextBox> list_TbxAnswers = new List<TextBox>();
+        
 
         public QuestionCreator()
         {
@@ -89,6 +95,32 @@ namespace Projet_Quizz
         public void changeEnableState(Control a, bool enableOrNot)
         {
             a.Enabled = enableOrNot;
+        }
+
+        private void btn_AddQuestion_Click(object sender, EventArgs e)
+        {
+            string ConnexionString = "SERVER=127.0.0.1; DATABASE=bd_quizz; UID=root; PASSWORD=";
+            MySqlConnection connectionBase = new MySqlConnection(ConnexionString);
+
+            try
+            {
+                connectionBase.Open();
+
+                MySqlCommand commande = connectionBase.CreateCommand();
+
+                commande.CommandText = "INSERT INTO `tquestion`(`TextQuestion`) VALUES ('Test Question 2')";
+                commande.ExecuteNonQuery();
+                //connectionBase.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            finally
+            {
+                connectionBase.Close();
+            }
         }
     }
 }
