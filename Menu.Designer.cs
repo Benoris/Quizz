@@ -38,7 +38,6 @@
             this.enregistrerSousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Quit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -46,7 +45,7 @@
             // 
             // btn_Play
             // 
-            this.btn_Play.Location = new System.Drawing.Point(12, 59);
+            this.btn_Play.Location = new System.Drawing.Point(12, 27);
             this.btn_Play.Name = "btn_Play";
             this.btn_Play.Size = new System.Drawing.Size(86, 34);
             this.btn_Play.TabIndex = 0;
@@ -56,7 +55,7 @@
             // 
             // btn_ShowCreator
             // 
-            this.btn_ShowCreator.Location = new System.Drawing.Point(12, 119);
+            this.btn_ShowCreator.Location = new System.Drawing.Point(12, 67);
             this.btn_ShowCreator.Name = "btn_ShowCreator";
             this.btn_ShowCreator.Size = new System.Drawing.Size(185, 34);
             this.btn_ShowCreator.TabIndex = 1;
@@ -66,7 +65,7 @@
             // 
             // btn_Score
             // 
-            this.btn_Score.Location = new System.Drawing.Point(111, 59);
+            this.btn_Score.Location = new System.Drawing.Point(111, 27);
             this.btn_Score.Name = "btn_Score";
             this.btn_Score.Size = new System.Drawing.Size(86, 34);
             this.btn_Score.TabIndex = 2;
@@ -79,7 +78,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.editionToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -122,11 +120,6 @@
             this.editionToolStripMenuItem.Text = "Edition";
             this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -135,7 +128,7 @@
             // 
             // btn_Quit
             // 
-            this.btn_Quit.Location = new System.Drawing.Point(12, 159);
+            this.btn_Quit.Location = new System.Drawing.Point(12, 107);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(185, 36);
             this.btn_Quit.TabIndex = 4;
@@ -147,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 204);
+            this.ClientSize = new System.Drawing.Size(209, 153);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_Score);
             this.Controls.Add(this.btn_ShowCreator);
@@ -176,7 +169,6 @@
         private System.Windows.Forms.ToolStripMenuItem enregistrerSousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
