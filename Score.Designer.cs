@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Score));
             this.lbx_ListeJoueur = new System.Windows.Forms.ListBox();
             this.lbl_ListeJoueur = new System.Windows.Forms.Label();
             this.lbl_Score = new System.Windows.Forms.Label();
@@ -80,6 +81,7 @@
             this.Controls.Add(this.lbl_Score);
             this.Controls.Add(this.lbl_ListeJoueur);
             this.Controls.Add(this.lbx_ListeJoueur);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Score";
             this.Text = "Score";
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace Projet_Quizz
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btn_Play = new System.Windows.Forms.Button();
             this.btn_ShowCreator = new System.Windows.Forms.Button();
             this.btn_Score = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@
             this.Controls.Add(this.btn_Score);
             this.Controls.Add(this.btn_ShowCreator);
             this.Controls.Add(this.btn_Play);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Quizz";
             this.ResumeLayout(false);

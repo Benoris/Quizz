@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionCreator));
             this.lbl_Question = new System.Windows.Forms.Label();
             this.tbx_Question = new System.Windows.Forms.TextBox();
             this.gb_Answer1 = new System.Windows.Forms.GroupBox();
@@ -38,30 +39,30 @@
             this.cmb_QuestType = new System.Windows.Forms.ComboBox();
             this.rdb_CorrectAnswer2 = new System.Windows.Forms.RadioButton();
             this.gb_Answer2 = new System.Windows.Forms.GroupBox();
-            this.rdb_CorrectAnswer1 = new System.Windows.Forms.RadioButton();
-            this.gb_Answer3 = new System.Windows.Forms.GroupBox();
-            this.rdb_CorrectAnswer3 = new System.Windows.Forms.RadioButton();
-            this.gb_Answer4 = new System.Windows.Forms.GroupBox();
-            this.rdb_CorrectAnswer4 = new System.Windows.Forms.RadioButton();
             this.btn_OpenImage2 = new System.Windows.Forms.Button();
             this.lbl_Rep2 = new System.Windows.Forms.Label();
             this.tbx_Rep2 = new System.Windows.Forms.TextBox();
             this.pb_Rep2 = new System.Windows.Forms.PictureBox();
+            this.rdb_CorrectAnswer1 = new System.Windows.Forms.RadioButton();
+            this.gb_Answer3 = new System.Windows.Forms.GroupBox();
             this.btn_OpenImage3 = new System.Windows.Forms.Button();
             this.lbl_Rep3 = new System.Windows.Forms.Label();
             this.tbx_Rep3 = new System.Windows.Forms.TextBox();
             this.pb_Rep3 = new System.Windows.Forms.PictureBox();
+            this.rdb_CorrectAnswer3 = new System.Windows.Forms.RadioButton();
+            this.gb_Answer4 = new System.Windows.Forms.GroupBox();
             this.btn_OpenImage4 = new System.Windows.Forms.Button();
             this.lbl_Rep4 = new System.Windows.Forms.Label();
             this.tbx_Rep4 = new System.Windows.Forms.TextBox();
             this.pb_Rep4 = new System.Windows.Forms.PictureBox();
+            this.rdb_CorrectAnswer4 = new System.Windows.Forms.RadioButton();
             this.gb_Answer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep1)).BeginInit();
             this.gb_Answer2.SuspendLayout();
-            this.gb_Answer3.SuspendLayout();
-            this.gb_Answer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep2)).BeginInit();
+            this.gb_Answer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep3)).BeginInit();
+            this.gb_Answer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,66 +169,6 @@
             this.gb_Answer2.TabStop = false;
             this.gb_Answer2.Text = "Reponse 2";
             // 
-            // rdb_CorrectAnswer1
-            // 
-            this.rdb_CorrectAnswer1.AutoSize = true;
-            this.rdb_CorrectAnswer1.Checked = true;
-            this.rdb_CorrectAnswer1.Location = new System.Drawing.Point(89, 143);
-            this.rdb_CorrectAnswer1.Name = "rdb_CorrectAnswer1";
-            this.rdb_CorrectAnswer1.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer1.TabIndex = 0;
-            this.rdb_CorrectAnswer1.TabStop = true;
-            this.rdb_CorrectAnswer1.Text = "Correcte";
-            this.rdb_CorrectAnswer1.UseVisualStyleBackColor = true;
-            // 
-            // gb_Answer3
-            // 
-            this.gb_Answer3.Controls.Add(this.btn_OpenImage3);
-            this.gb_Answer3.Controls.Add(this.lbl_Rep3);
-            this.gb_Answer3.Controls.Add(this.tbx_Rep3);
-            this.gb_Answer3.Controls.Add(this.pb_Rep3);
-            this.gb_Answer3.Location = new System.Drawing.Point(489, 166);
-            this.gb_Answer3.Name = "gb_Answer3";
-            this.gb_Answer3.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer3.TabIndex = 3;
-            this.gb_Answer3.TabStop = false;
-            this.gb_Answer3.Text = "Reponse 3";
-            // 
-            // rdb_CorrectAnswer3
-            // 
-            this.rdb_CorrectAnswer3.AutoSize = true;
-            this.rdb_CorrectAnswer3.Location = new System.Drawing.Point(568, 143);
-            this.rdb_CorrectAnswer3.Name = "rdb_CorrectAnswer3";
-            this.rdb_CorrectAnswer3.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer3.TabIndex = 0;
-            this.rdb_CorrectAnswer3.TabStop = true;
-            this.rdb_CorrectAnswer3.Text = "Correcte";
-            this.rdb_CorrectAnswer3.UseVisualStyleBackColor = true;
-            // 
-            // gb_Answer4
-            // 
-            this.gb_Answer4.Controls.Add(this.btn_OpenImage4);
-            this.gb_Answer4.Controls.Add(this.lbl_Rep4);
-            this.gb_Answer4.Controls.Add(this.tbx_Rep4);
-            this.gb_Answer4.Controls.Add(this.pb_Rep4);
-            this.gb_Answer4.Location = new System.Drawing.Point(726, 166);
-            this.gb_Answer4.Name = "gb_Answer4";
-            this.gb_Answer4.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer4.TabIndex = 3;
-            this.gb_Answer4.TabStop = false;
-            this.gb_Answer4.Text = "Reponse 4";
-            // 
-            // rdb_CorrectAnswer4
-            // 
-            this.rdb_CorrectAnswer4.AutoSize = true;
-            this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(806, 143);
-            this.rdb_CorrectAnswer4.Name = "rdb_CorrectAnswer4";
-            this.rdb_CorrectAnswer4.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer4.TabIndex = 0;
-            this.rdb_CorrectAnswer4.TabStop = true;
-            this.rdb_CorrectAnswer4.Text = "Correcte";
-            this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
-            // 
             // btn_OpenImage2
             // 
             this.btn_OpenImage2.Location = new System.Drawing.Point(9, 95);
@@ -263,6 +204,31 @@
             this.pb_Rep2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Rep2.TabIndex = 4;
             this.pb_Rep2.TabStop = false;
+            // 
+            // rdb_CorrectAnswer1
+            // 
+            this.rdb_CorrectAnswer1.AutoSize = true;
+            this.rdb_CorrectAnswer1.Checked = true;
+            this.rdb_CorrectAnswer1.Location = new System.Drawing.Point(89, 143);
+            this.rdb_CorrectAnswer1.Name = "rdb_CorrectAnswer1";
+            this.rdb_CorrectAnswer1.Size = new System.Drawing.Size(65, 17);
+            this.rdb_CorrectAnswer1.TabIndex = 0;
+            this.rdb_CorrectAnswer1.TabStop = true;
+            this.rdb_CorrectAnswer1.Text = "Correcte";
+            this.rdb_CorrectAnswer1.UseVisualStyleBackColor = true;
+            // 
+            // gb_Answer3
+            // 
+            this.gb_Answer3.Controls.Add(this.btn_OpenImage3);
+            this.gb_Answer3.Controls.Add(this.lbl_Rep3);
+            this.gb_Answer3.Controls.Add(this.tbx_Rep3);
+            this.gb_Answer3.Controls.Add(this.pb_Rep3);
+            this.gb_Answer3.Location = new System.Drawing.Point(489, 166);
+            this.gb_Answer3.Name = "gb_Answer3";
+            this.gb_Answer3.Size = new System.Drawing.Size(231, 411);
+            this.gb_Answer3.TabIndex = 3;
+            this.gb_Answer3.TabStop = false;
+            this.gb_Answer3.Text = "Reponse 3";
             // 
             // btn_OpenImage3
             // 
@@ -300,6 +266,30 @@
             this.pb_Rep3.TabIndex = 4;
             this.pb_Rep3.TabStop = false;
             // 
+            // rdb_CorrectAnswer3
+            // 
+            this.rdb_CorrectAnswer3.AutoSize = true;
+            this.rdb_CorrectAnswer3.Location = new System.Drawing.Point(568, 143);
+            this.rdb_CorrectAnswer3.Name = "rdb_CorrectAnswer3";
+            this.rdb_CorrectAnswer3.Size = new System.Drawing.Size(65, 17);
+            this.rdb_CorrectAnswer3.TabIndex = 0;
+            this.rdb_CorrectAnswer3.TabStop = true;
+            this.rdb_CorrectAnswer3.Text = "Correcte";
+            this.rdb_CorrectAnswer3.UseVisualStyleBackColor = true;
+            // 
+            // gb_Answer4
+            // 
+            this.gb_Answer4.Controls.Add(this.btn_OpenImage4);
+            this.gb_Answer4.Controls.Add(this.lbl_Rep4);
+            this.gb_Answer4.Controls.Add(this.tbx_Rep4);
+            this.gb_Answer4.Controls.Add(this.pb_Rep4);
+            this.gb_Answer4.Location = new System.Drawing.Point(726, 166);
+            this.gb_Answer4.Name = "gb_Answer4";
+            this.gb_Answer4.Size = new System.Drawing.Size(231, 411);
+            this.gb_Answer4.TabIndex = 3;
+            this.gb_Answer4.TabStop = false;
+            this.gb_Answer4.Text = "Reponse 4";
+            // 
             // btn_OpenImage4
             // 
             this.btn_OpenImage4.Location = new System.Drawing.Point(9, 95);
@@ -336,6 +326,17 @@
             this.pb_Rep4.TabIndex = 4;
             this.pb_Rep4.TabStop = false;
             // 
+            // rdb_CorrectAnswer4
+            // 
+            this.rdb_CorrectAnswer4.AutoSize = true;
+            this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(806, 143);
+            this.rdb_CorrectAnswer4.Name = "rdb_CorrectAnswer4";
+            this.rdb_CorrectAnswer4.Size = new System.Drawing.Size(65, 17);
+            this.rdb_CorrectAnswer4.TabIndex = 0;
+            this.rdb_CorrectAnswer4.TabStop = true;
+            this.rdb_CorrectAnswer4.Text = "Correcte";
+            this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
+            // 
             // QuestionCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +353,7 @@
             this.Controls.Add(this.gb_Answer1);
             this.Controls.Add(this.tbx_Question);
             this.Controls.Add(this.lbl_Question);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QuestionCreator";
             this.Text = "QuestionCreator";
             this.gb_Answer1.ResumeLayout(false);
@@ -359,12 +361,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep1)).EndInit();
             this.gb_Answer2.ResumeLayout(false);
             this.gb_Answer2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Rep2)).EndInit();
             this.gb_Answer3.ResumeLayout(false);
             this.gb_Answer3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Rep3)).EndInit();
             this.gb_Answer4.ResumeLayout(false);
             this.gb_Answer4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Rep2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Rep3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jeux));
             this.lbl_Question = new System.Windows.Forms.Label();
             this.rdb_rp1 = new System.Windows.Forms.RadioButton();
             this.rdb_rp2 = new System.Windows.Forms.RadioButton();
@@ -98,6 +99,7 @@
             this.Controls.Add(this.rdb_rp2);
             this.Controls.Add(this.rdb_rp1);
             this.Controls.Add(this.lbl_Question);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Jeux";
             this.Text = "Jeux";
             this.ResumeLayout(false);
