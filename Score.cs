@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace Projet_Quizz
 {
     public partial class Score : Form
-    {
-        List<string> list = new List<string>();
+    {        
         List<List<string>> list2 = new List<List<string>>();
         public Score()
         {
