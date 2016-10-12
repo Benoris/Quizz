@@ -99,7 +99,7 @@ namespace Projet_Quizz
 
         private void btn_AddQuestion_Click(object sender, EventArgs e)
         {
-            string ConnexionString = "SERVER=127.0.0.1; DATABASE=bd_quizz; UID=root; PASSWORD=";
+            /*string ConnexionString = "SERVER=127.0.0.1; DATABASE=bd_quizz; UID=root; PASSWORD=";
             MySqlConnection connectionBase = new MySqlConnection(ConnexionString);
 
             try
@@ -120,7 +120,7 @@ namespace Projet_Quizz
             finally
             {
                 connectionBase.Close();
-            }
+            }*/
         }
     }
 }
