@@ -32,11 +32,21 @@
             this.btn_Play = new System.Windows.Forms.Button();
             this.btn_ShowCreator = new System.Windows.Forms.Button();
             this.btn_Score = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enregistrerSousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Quit = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Play
             // 
-            this.btn_Play.Location = new System.Drawing.Point(78, 35);
+            this.btn_Play.Location = new System.Drawing.Point(12, 59);
             this.btn_Play.Name = "btn_Play";
             this.btn_Play.Size = new System.Drawing.Size(86, 34);
             this.btn_Play.TabIndex = 0;
@@ -46,7 +56,7 @@
             // 
             // btn_ShowCreator
             // 
-            this.btn_ShowCreator.Location = new System.Drawing.Point(254, 35);
+            this.btn_ShowCreator.Location = new System.Drawing.Point(12, 119);
             this.btn_ShowCreator.Name = "btn_ShowCreator";
             this.btn_ShowCreator.Size = new System.Drawing.Size(185, 34);
             this.btn_ShowCreator.TabIndex = 1;
@@ -56,7 +66,7 @@
             // 
             // btn_Score
             // 
-            this.btn_Score.Location = new System.Drawing.Point(179, 110);
+            this.btn_Score.Location = new System.Drawing.Point(111, 59);
             this.btn_Score.Name = "btn_Score";
             this.btn_Score.Size = new System.Drawing.Size(86, 34);
             this.btn_Score.TabIndex = 2;
@@ -64,18 +74,93 @@
             this.btn_Score.UseVisualStyleBackColor = true;
             this.btn_Score.Click += new System.EventHandler(this.btn_Score_Click);
             // 
-            // Form1
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fichierToolStripMenuItem,
+            this.editionToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(209, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fichierToolStripMenuItem
+            // 
+            this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enregistrerToolStripMenuItem,
+            this.enregistrerSousToolStripMenuItem,
+            this.quitterToolStripMenuItem});
+            this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // enregistrerToolStripMenuItem
+            // 
+            this.enregistrerToolStripMenuItem.Name = "enregistrerToolStripMenuItem";
+            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.enregistrerToolStripMenuItem.Text = "Enregistrer";
+            // 
+            // enregistrerSousToolStripMenuItem
+            // 
+            this.enregistrerSousToolStripMenuItem.Name = "enregistrerSousToolStripMenuItem";
+            this.enregistrerSousToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.enregistrerSousToolStripMenuItem.Text = "Enregistrer sous";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            // 
+            // editionToolStripMenuItem
+            // 
+            this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
+            this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.editionToolStripMenuItem.Text = "Edition";
+            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(43, 20);
+            this.toolStripMenuItem2.Text = "Aide";
+            // 
+            // btn_Quit
+            // 
+            this.btn_Quit.Location = new System.Drawing.Point(12, 159);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(185, 36);
+            this.btn_Quit.TabIndex = 4;
+            this.btn_Quit.Text = "Quitter";
+            this.btn_Quit.UseVisualStyleBackColor = true;
+            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 180);
+            this.ClientSize = new System.Drawing.Size(209, 204);
+            this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_Score);
             this.Controls.Add(this.btn_ShowCreator);
             this.Controls.Add(this.btn_Play);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Menu";
             this.Text = "Quizz";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,6 +169,15 @@
         private System.Windows.Forms.Button btn_Play;
         private System.Windows.Forms.Button btn_ShowCreator;
         private System.Windows.Forms.Button btn_Score;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button btn_Quit;
+        private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enregistrerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enregistrerSousToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

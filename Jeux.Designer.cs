@@ -39,7 +39,7 @@
             // lbl_Question
             // 
             this.lbl_Question.AutoSize = true;
-            this.lbl_Question.Location = new System.Drawing.Point(46, 40);
+            this.lbl_Question.Location = new System.Drawing.Point(135, 43);
             this.lbl_Question.Name = "lbl_Question";
             this.lbl_Question.Size = new System.Drawing.Size(305, 13);
             this.lbl_Question.TabIndex = 0;
@@ -48,7 +48,7 @@
             // rdb_rp1
             // 
             this.rdb_rp1.AutoSize = true;
-            this.rdb_rp1.Location = new System.Drawing.Point(49, 97);
+            this.rdb_rp1.Location = new System.Drawing.Point(293, 127);
             this.rdb_rp1.Name = "rdb_rp1";
             this.rdb_rp1.Size = new System.Drawing.Size(49, 17);
             this.rdb_rp1.TabIndex = 1;
@@ -59,7 +59,7 @@
             // rdb_rp2
             // 
             this.rdb_rp2.AutoSize = true;
-            this.rdb_rp2.Location = new System.Drawing.Point(49, 120);
+            this.rdb_rp2.Location = new System.Drawing.Point(293, 150);
             this.rdb_rp2.Name = "rdb_rp2";
             this.rdb_rp2.Size = new System.Drawing.Size(49, 17);
             this.rdb_rp2.TabIndex = 2;
@@ -70,7 +70,7 @@
             // rdb_rp3
             // 
             this.rdb_rp3.AutoSize = true;
-            this.rdb_rp3.Location = new System.Drawing.Point(49, 143);
+            this.rdb_rp3.Location = new System.Drawing.Point(293, 173);
             this.rdb_rp3.Name = "rdb_rp3";
             this.rdb_rp3.Size = new System.Drawing.Size(49, 17);
             this.rdb_rp3.TabIndex = 3;
@@ -81,7 +81,7 @@
             // rdb_rp4
             // 
             this.rdb_rp4.AutoSize = true;
-            this.rdb_rp4.Location = new System.Drawing.Point(49, 166);
+            this.rdb_rp4.Location = new System.Drawing.Point(293, 196);
             this.rdb_rp4.Name = "rdb_rp4";
             this.rdb_rp4.Size = new System.Drawing.Size(49, 17);
             this.rdb_rp4.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 360);
+            this.ClientSize = new System.Drawing.Size(562, 360);
             this.Controls.Add(this.rdb_rp4);
             this.Controls.Add(this.rdb_rp3);
             this.Controls.Add(this.rdb_rp2);

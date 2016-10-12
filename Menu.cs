@@ -35,5 +35,15 @@ namespace Projet_Quizz
             Score Score = new Score();
             Score.ShowDialog();
         }
+
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void editionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
