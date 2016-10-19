@@ -123,6 +123,7 @@
             this.tbx_Rep1.Name = "tbx_Rep1";
             this.tbx_Rep1.Size = new System.Drawing.Size(219, 55);
             this.tbx_Rep1.TabIndex = 1;
+            this.tbx_Rep1.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep1
             // 
@@ -195,6 +196,7 @@
             this.tbx_Rep2.Name = "tbx_Rep2";
             this.tbx_Rep2.Size = new System.Drawing.Size(219, 55);
             this.tbx_Rep2.TabIndex = 5;
+            this.tbx_Rep2.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep2
             // 
@@ -256,6 +258,7 @@
             this.tbx_Rep3.Name = "tbx_Rep3";
             this.tbx_Rep3.Size = new System.Drawing.Size(219, 55);
             this.tbx_Rep3.TabIndex = 5;
+            this.tbx_Rep3.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep3
             // 
@@ -316,6 +319,7 @@
             this.tbx_Rep4.Name = "tbx_Rep4";
             this.tbx_Rep4.Size = new System.Drawing.Size(219, 55);
             this.tbx_Rep4.TabIndex = 5;
+            this.tbx_Rep4.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep4
             // 

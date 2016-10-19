@@ -49,6 +49,7 @@ namespace Projet_Quizz
                 pb_Rep1.Image = Image.FromFile(dlg.FileName);
             }
             dlg.Dispose();
+            btn_ValidChange();
         }
 
         private void cmb_QuestType_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,6 +90,8 @@ namespace Projet_Quizz
                 changeEnableState(btn_OpenImage3, true);
                 changeEnableState(btn_OpenImage4, true);
             }
+
+            btn_ValidChange();
             
         }
 
@@ -121,6 +124,41 @@ namespace Projet_Quizz
             {
                 connectionBase.Close();
             }*/
+        }
+
+        private void btn_ValidChange()
+        {
+            if (cmb_QuestType.SelectedIndex == 0)
+            {
+                if (tbx_Rep1.Text != "" && tbx_Rep2.Text != "" && tbx_Rep3.Text != "" && tbx_Rep4.Text != "")
+                {
+                    btn_AddQuestion.Enabled = true;
+                }
+                else
+                {
+                    btn_AddQuestion.Enabled = false;
+                }
+            }
+            else if (cmb_QuestType.SelectedIndex == 1)
+            {
+                if (pb_Rep1.Image != null && pb_Rep2.Image != null && pb_Rep3.Image != null && pb_Rep4.Image != null)
+                {
+                    btn_AddQuestion.Enabled = true;
+                }
+                else
+                {
+                    btn_AddQuestion.Enabled = false;
+                }
+            }
+            else
+            {
+                btn_AddQuestion.Enabled = false;
+            }
+        }
+
+        private void tbx_Rep1_TextChanged(object sender, EventArgs e)
+        {
+            btn_ValidChange();
         }
     }
 }
