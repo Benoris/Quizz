@@ -38,10 +38,13 @@
             this.TSM_Enregistrersous = new System.Windows.Forms.ToolStripMenuItem();
             this.TSM_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_aprop = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Quit = new System.Windows.Forms.Button();
-            this.TSM_aprop = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tss_Time = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Play
@@ -125,6 +128,12 @@
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "Edition";
             // 
+            // TSM_aprop
+            // 
+            this.TSM_aprop.Name = "TSM_aprop";
+            this.TSM_aprop.Size = new System.Drawing.Size(122, 22);
+            this.TSM_aprop.Text = "À propos";
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
@@ -141,17 +150,27 @@
             this.btn_Quit.UseVisualStyleBackColor = true;
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
-            // TSM_aprop
+            // statusStrip1
             // 
-            this.TSM_aprop.Name = "TSM_aprop";
-            this.TSM_aprop.Size = new System.Drawing.Size(152, 22);
-            this.TSM_aprop.Text = "À propos";
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tss_Time});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 148);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(209, 22);
+            this.statusStrip1.TabIndex = 5;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tss_Time
+            // 
+            this.tss_Time.Name = "tss_Time";
+            this.tss_Time.Size = new System.Drawing.Size(0, 17);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 153);
+            this.ClientSize = new System.Drawing.Size(209, 170);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_Score);
             this.Controls.Add(this.btn_ShowCreator);
@@ -163,6 +182,8 @@
             this.Text = "Quizz";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +203,8 @@
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem TSM_aprop;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tss_Time;
     }
 }
 

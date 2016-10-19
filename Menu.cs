@@ -15,7 +15,7 @@ namespace Projet_Quizz
         public Menu()
         {
             InitializeComponent();
-           
+            tss_Time.Text = DateTime.Now.ToShortTimeString().ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -45,5 +45,6 @@ namespace Projet_Quizz
         {
             Application.Exit();
         }
+
     }
 }
