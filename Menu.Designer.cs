@@ -34,12 +34,13 @@
             this.btn_Score = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enregistrerSousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_Enregistrer = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_Enregistrersous = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.editionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Quit = new System.Windows.Forms.Button();
+            this.TSM_aprop = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,37 +89,41 @@
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.enregistrerToolStripMenuItem,
-            this.enregistrerSousToolStripMenuItem,
-            this.quitterToolStripMenuItem});
+            this.TSM_Enregistrer,
+            this.TSM_Enregistrersous,
+            this.TSM_Quit});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
-            // enregistrerToolStripMenuItem
+            // TSM_Enregistrer
             // 
-            this.enregistrerToolStripMenuItem.Name = "enregistrerToolStripMenuItem";
-            this.enregistrerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.enregistrerToolStripMenuItem.Text = "Enregistrer";
+            this.TSM_Enregistrer.Name = "TSM_Enregistrer";
+            this.TSM_Enregistrer.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.TSM_Enregistrer.Size = new System.Drawing.Size(170, 22);
+            this.TSM_Enregistrer.Text = "Enregistrer";
             // 
-            // enregistrerSousToolStripMenuItem
+            // TSM_Enregistrersous
             // 
-            this.enregistrerSousToolStripMenuItem.Name = "enregistrerSousToolStripMenuItem";
-            this.enregistrerSousToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.enregistrerSousToolStripMenuItem.Text = "Enregistrer sous";
+            this.TSM_Enregistrersous.Name = "TSM_Enregistrersous";
+            this.TSM_Enregistrersous.Size = new System.Drawing.Size(170, 22);
+            this.TSM_Enregistrersous.Text = "Enregistrer sous";
             // 
-            // quitterToolStripMenuItem
+            // TSM_Quit
             // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.TSM_Quit.Name = "TSM_Quit";
+            this.TSM_Quit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.TSM_Quit.Size = new System.Drawing.Size(170, 22);
+            this.TSM_Quit.Text = "Quitter";
+            this.TSM_Quit.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
             // editionToolStripMenuItem
             // 
+            this.editionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM_aprop});
             this.editionToolStripMenuItem.Name = "editionToolStripMenuItem";
             this.editionToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.editionToolStripMenuItem.Text = "Edition";
-            this.editionToolStripMenuItem.Click += new System.EventHandler(this.editionToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -135,6 +140,12 @@
             this.btn_Quit.Text = "Quitter";
             this.btn_Quit.UseVisualStyleBackColor = true;
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            // 
+            // TSM_aprop
+            // 
+            this.TSM_aprop.Name = "TSM_aprop";
+            this.TSM_aprop.Size = new System.Drawing.Size(152, 22);
+            this.TSM_aprop.Text = "À propos";
             // 
             // Menu
             // 
@@ -165,11 +176,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enregistrerSousToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Enregistrer;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Enregistrersous;
+        private System.Windows.Forms.ToolStripMenuItem TSM_Quit;
         private System.Windows.Forms.ToolStripMenuItem editionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem TSM_aprop;
     }
 }
 

@@ -41,9 +41,9 @@ namespace Projet_Quizz
             Application.Exit();
         }
 
-        private void editionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
