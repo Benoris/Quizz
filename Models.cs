@@ -48,7 +48,7 @@ namespace Projet_Quizz
         /// <param name="Sql">La commande sql</param>
         /// <returns>Retourne une liste qvec le resultat de la requette</returns>
         public List<string> ReadDataBase(string Sql)
-        {
+        {            
             List<string> lst = new List<string>();//Création de la liste qui sera renvoyer
             List<string> Entete = new List<string>();//Création de la liste qui contien tout les éléments que la commande sql va renvoyer
 
@@ -84,6 +84,49 @@ namespace Projet_Quizz
                 }
             }
             return lst;
+        }
+
+//==============================================================================================================================//
+//=============================================================================================================================//
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Sql"></param>
+        /// Veuillez écrire la requetes dans se style : INSERT INTO projets(NomProjet,idProjet) VALUES(@Prenom,@1)
+        /// !!!!!!ATTENTION A NE PAS METTRE D'ESPACE APRES LES VIRGULES!!!!!!
+        public void WriteDataBase(string Sql, List<string> ListValeurs)
+        {
+            string Entete;//Création du string qui contien tout les éléments valeur variable (@Elem1) que la commande sql va envoyer
+            List<string> Values = new List<string>();
+
+            char[] Delimiteurs = { ' ' };//Tableau de delimiteur
+            string[] Mots = Sql.Split(Delimiteurs);//Tableau avec la commande sql
+
+            Entete = Mots[3];
+
+            char[] Delimiteurs2 = { '(', ')', ',' };
+            string[] Vals = Entete.Split(Delimiteurs2);
+
+            //Création de la liste qui contien uniquement le nom des valeurs variables
+            foreach (string col in Vals)
+            {
+                if (col.StartsWith("@"))
+                {
+                    Values.Add(col);
+                }
+            }
+
+            if (Sql != "" && Sql != null)
+            {
+                SqlToSend = BDDConnection.CreateCommand();
+                SqlToSend.CommandText = Sql;
+                for (int i = 0; i < Values.Count(); i++)
+                {
+                    SqlToSend.Parameters.AddWithValue(Values[i], ListValeurs[i]);
+                }
+                SqlToSend.ExecuteNonQuery();
+            }
         }
     }
 }
