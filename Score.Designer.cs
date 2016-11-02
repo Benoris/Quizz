@@ -33,6 +33,7 @@
             this.btn_QuitterScore = new System.Windows.Forms.Button();
             this.lbl_NumScore = new System.Windows.Forms.Label();
             this.lbl_Score = new System.Windows.Forms.Label();
+            this.lbl_Connect = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lsb_ListeJoueur
@@ -82,11 +83,21 @@
             this.lbl_Score.TabIndex = 3;
             this.lbl_Score.Text = "Score :";
             // 
+            // lbl_Connect
+            // 
+            this.lbl_Connect.AutoSize = true;
+            this.lbl_Connect.Location = new System.Drawing.Point(197, 309);
+            this.lbl_Connect.Name = "lbl_Connect";
+            this.lbl_Connect.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Connect.TabIndex = 6;
+            this.lbl_Connect.Text = "label1";
+            // 
             // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 331);
+            this.Controls.Add(this.lbl_Connect);
             this.Controls.Add(this.btn_QuitterScore);
             this.Controls.Add(this.lbl_NumScore);
             this.Controls.Add(this.lbl_Score);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.Button btn_QuitterScore;
         private System.Windows.Forms.Label lbl_NumScore;
         private System.Windows.Forms.Label lbl_Score;
+        private System.Windows.Forms.Label lbl_Connect;
     }
 }

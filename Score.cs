@@ -13,13 +13,19 @@ namespace Projet_Quizz
     public partial class Score : Form
     {        
         List<List<string>> list2 = new List<List<string>>();
+        Models model = new Models();
+        
         public Score()
         {
             InitializeComponent();
+           
+            model.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
         }
 
         private void Score_Load(object sender, EventArgs e)
         {
+
+
             list2.Add(new List<string> { "Leila", "30" });
             list2.Add(new List<string> { "Hulk", "50" });
             list2.Add(new List<string> { "Tony", "100" });
@@ -29,8 +35,8 @@ namespace Projet_Quizz
             {
                 lsb_ListeJoueur.Items.Add(list2[i][0]);
             }
-            
 
+            lbl_Connect.Text = model.Status;
         }
 
         private void lsb_ListeJoueur_SelectedIndexChanged(object sender, EventArgs e)

@@ -11,6 +11,14 @@ namespace Projet_Quizz
     class Models
     {
 
+        private string _status = "";       
+
+        public string Status
+        {
+            get { return _status; }
+            set { _status = value; }
+        }
+
         MySqlConnection BDDConnection;
         MySqlCommand SqlToSend;
         MySqlDataReader ReadBdd;
@@ -32,8 +40,13 @@ namespace Projet_Quizz
                 {
                     //Overture de la connection
                     BDDConnection.Open();
+                    this.Status = "Connecter";
+                    
                 }
-                catch (Exception ex) { /*return ex.Message;*/ }
+                catch (Exception ex) 
+                {
+                    this.Status = "Error";
+                }
             }
         }
 
