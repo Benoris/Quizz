@@ -133,7 +133,7 @@ namespace Projet_Quizz
         {
             if (cmb_QuestType.SelectedIndex == 0)
             {
-                if (tbx_Rep1.Text != "" && tbx_Rep2.Text != "" && tbx_Rep3.Text != "" && tbx_Rep4.Text != "")
+                if (tbx_Rep1.Text != "" && tbx_Rep2.Text != "" && tbx_Rep3.Text != "" && tbx_Rep4.Text != "" && tbx_Question.Text != "")
                 {
                     btn_AddQuestion.Enabled = true;
                 }
@@ -144,7 +144,7 @@ namespace Projet_Quizz
             }
             else if (cmb_QuestType.SelectedIndex == 1)
             {
-                if (pb_Rep1.Image != null && pb_Rep2.Image != null && pb_Rep3.Image != null && pb_Rep4.Image != null)
+                if (pb_Rep1.Image != null && pb_Rep2.Image != null && pb_Rep3.Image != null && pb_Rep4.Image != null && tbx_Question.Text != "")
                 {
                     btn_AddQuestion.Enabled = true;
                 }
