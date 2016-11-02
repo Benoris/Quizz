@@ -61,5 +61,11 @@ namespace Projet_Quizz
             a.ShowDialog();
         }
 
+        private void TSM_aprop_Click(object sender, EventArgs e)
+        {
+            AboutBox a = new AboutBox();
+            a.ShowDialog();
+        }
+
     }
 }

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
 [assembly: AssemblyTitle("Projet_Quizz")]
-[assembly: AssemblyDescription("C'est un jeu de quizz très très stylé")]
+[assembly: AssemblyDescription("Un quizz très fortement stylé")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("☺La8==D♥")]
+[assembly: AssemblyCompany("LinoMartinsNaefDinh aka PGM's")]
 [assembly: AssemblyProduct("Projet_Quizz")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("Air Max PPAP")]
