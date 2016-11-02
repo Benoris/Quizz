@@ -7,27 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 
 namespace Projet_Quizz
 {
     public partial class Score : Form
-    {
-        Models model = new Models();
-
+    {        
         List<List<string>> list2 = new List<List<string>>();
         public Score()
         {
             InitializeComponent();
-
-            model.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
         }
 
         private void Score_Load(object sender, EventArgs e)
         {
-            
-
             list2.Add(new List<string> { "Leila", "30" });
             list2.Add(new List<string> { "Hulk", "50" });
             list2.Add(new List<string> { "Tony", "100" });
