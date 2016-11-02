@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 //
-using System.Data;
-using System.Data.SqlClient;
-//using MySql.Data;
-//using MySql.Data.SqlClient;
+//using System.Data;
+//using System.Data.SqlClient;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 //
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Projet_Quizz
 {
@@ -102,17 +103,18 @@ namespace Projet_Quizz
 
         private void btn_AddQuestion_Click(object sender, EventArgs e)
         {
-            /*string ConnexionString = "SERVER=127.0.0.1; DATABASE=bd_quizz; UID=root; PASSWORD=";
+            string ConnexionString = "SERVER=10.134.181.213; DATABASE=Quizz; UID=Quizz; PASSWORD=SuperC101";
             MySqlConnection connectionBase = new MySqlConnection(ConnexionString);
 
             try
             {
                 connectionBase.Open();
+                MessageBox.Show("Connection Ouverte");
 
-                MySqlCommand commande = connectionBase.CreateCommand();
+                /*MySqlCommand commande = connectionBase.CreateCommand();
 
                 commande.CommandText = "INSERT INTO `tquestion`(`TextQuestion`) VALUES ('Test Question 2')";
-                commande.ExecuteNonQuery();
+                commande.ExecuteNonQuery();*/
                 //connectionBase.Close();
             }
             catch (Exception ex)
@@ -123,7 +125,8 @@ namespace Projet_Quizz
             finally
             {
                 connectionBase.Close();
-            }*/
+                MessageBox.Show("Connection Fermée");
+            }
         }
 
         private void btn_ValidChange()
