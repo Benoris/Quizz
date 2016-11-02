@@ -53,12 +53,7 @@ namespace Projet_Quizz
         private void Menu_Load(object sender, EventArgs e)
         {
             timer1_Tick(sender, e);
-        }
-
-        private void TSM_aprop_Click(object sender, EventArgs e)
-        {
-            AboutBox a = new AboutBox();
-            a.ShowDialog();
+           //tss_Time.Text = DateTime.Now.ToShortTimeString().ToString();
         }
 
     }

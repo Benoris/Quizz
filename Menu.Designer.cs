@@ -133,9 +133,8 @@
             // TSM_aprop
             // 
             this.TSM_aprop.Name = "TSM_aprop";
-            this.TSM_aprop.Size = new System.Drawing.Size(152, 22);
+            this.TSM_aprop.Size = new System.Drawing.Size(122, 22);
             this.TSM_aprop.Text = "À propos";
-            this.TSM_aprop.Click += new System.EventHandler(this.TSM_aprop_Click);
             // 
             // toolStripMenuItem2
             // 
