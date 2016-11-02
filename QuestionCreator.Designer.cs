@@ -57,6 +57,7 @@
             this.pb_Rep4 = new System.Windows.Forms.PictureBox();
             this.rdb_CorrectAnswer4 = new System.Windows.Forms.RadioButton();
             this.btn_AddQuestion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gb_Answer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep1)).BeginInit();
             this.gb_Answer2.SuspendLayout();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep3)).BeginInit();
             this.gb_Answer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Question
@@ -83,6 +85,7 @@
             this.tbx_Question.Name = "tbx_Question";
             this.tbx_Question.Size = new System.Drawing.Size(297, 69);
             this.tbx_Question.TabIndex = 1;
+            this.tbx_Question.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // gb_Answer1
             // 
@@ -179,6 +182,7 @@
             this.btn_OpenImage2.TabIndex = 7;
             this.btn_OpenImage2.Text = "Sélectionner Image";
             this.btn_OpenImage2.UseVisualStyleBackColor = true;
+            this.btn_OpenImage2.Click += new System.EventHandler(this.btn_OpenImage2_Click);
             // 
             // lbl_Rep2
             // 
@@ -241,6 +245,7 @@
             this.btn_OpenImage3.TabIndex = 7;
             this.btn_OpenImage3.Text = "Sélectionner Image";
             this.btn_OpenImage3.UseVisualStyleBackColor = true;
+            this.btn_OpenImage3.Click += new System.EventHandler(this.btn_OpenImage3_Click);
             // 
             // lbl_Rep3
             // 
@@ -302,6 +307,7 @@
             this.btn_OpenImage4.TabIndex = 7;
             this.btn_OpenImage4.Text = "Sélectionner Image";
             this.btn_OpenImage4.UseVisualStyleBackColor = true;
+            this.btn_OpenImage4.Click += new System.EventHandler(this.btn_OpenImage4_Click);
             // 
             // lbl_Rep4
             // 
@@ -353,11 +359,21 @@
             this.btn_AddQuestion.UseVisualStyleBackColor = true;
             this.btn_AddQuestion.Click += new System.EventHandler(this.btn_AddQuestion_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(461, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // QuestionCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 630);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_AddQuestion);
             this.Controls.Add(this.rdb_CorrectAnswer4);
             this.Controls.Add(this.rdb_CorrectAnswer3);
@@ -385,6 +401,7 @@
             this.gb_Answer4.ResumeLayout(false);
             this.gb_Answer4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Rep4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,5 +437,6 @@
         private System.Windows.Forms.TextBox tbx_Rep4;
         private System.Windows.Forms.PictureBox pb_Rep4;
         private System.Windows.Forms.Button btn_AddQuestion;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

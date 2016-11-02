@@ -53,6 +53,45 @@ namespace Projet_Quizz
             btn_ValidChange();
         }
 
+        private void btn_OpenImage2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Images BMP (*.bmp)|*.bmp|Images PNG (*.png)|*.png|Images JPG(*.jpg)|*.jpg";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pb_Rep2.Image = Image.FromFile(dlg.FileName);
+            }
+            dlg.Dispose();
+            btn_ValidChange();
+        }
+
+        private void btn_OpenImage3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Images BMP (*.bmp)|*.bmp|Images PNG (*.png)|*.png|Images JPG(*.jpg)|*.jpg";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pb_Rep3.Image = Image.FromFile(dlg.FileName);
+            }
+            dlg.Dispose();
+            btn_ValidChange();
+        }
+
+        private void btn_OpenImage4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Image";
+            dlg.Filter = "Images BMP (*.bmp)|*.bmp|Images PNG (*.png)|*.png|Images JPG(*.jpg)|*.jpg";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pb_Rep4.Image = Image.FromFile(dlg.FileName);
+            }
+            dlg.Dispose();
+            btn_ValidChange();
+        }
+
         private void cmb_QuestType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if ((sender as ComboBox).SelectedIndex == 0)
@@ -103,7 +142,8 @@ namespace Projet_Quizz
 
         private void btn_AddQuestion_Click(object sender, EventArgs e)
         {
-            string ConnexionString = "SERVER=10.134.181.213; DATABASE=Quizz; UID=Quizz; PASSWORD=SuperC101";
+            List<object> a = new List<object>();
+            /*string ConnexionString = "SERVER=10.134.181.213; DATABASE=Quizz; UID=Quizz; PASSWORD=SuperC101";
             MySqlConnection connectionBase = new MySqlConnection(ConnexionString);
 
             try
@@ -111,10 +151,10 @@ namespace Projet_Quizz
                 connectionBase.Open();
                 MessageBox.Show("Connection Ouverte");
 
-                /*MySqlCommand commande = connectionBase.CreateCommand();
+                //MySqlCommand commande = connectionBase.CreateCommand();
 
-                commande.CommandText = "INSERT INTO `tquestion`(`TextQuestion`) VALUES ('Test Question 2')";
-                commande.ExecuteNonQuery();*/
+                //commande.CommandText = "INSERT INTO `tquestion`(`TextQuestion`) VALUES ('Test Question 2')";
+                //commande.ExecuteNonQuery();
                 //connectionBase.Close();
             }
             catch (Exception ex)
@@ -126,6 +166,62 @@ namespace Projet_Quizz
             {
                 connectionBase.Close();
                 MessageBox.Show("Connection Fermée");
+            }*/
+            if (cmb_QuestType.SelectedIndex == 0)
+            {
+                a.Add(tbx_Question.Text);
+                a.Add(tbx_Rep1.Text);
+                a.Add(tbx_Rep2.Text);
+                a.Add(tbx_Rep3.Text);
+                a.Add(tbx_Rep4.Text);
+
+                MessageBox.Show(a[0].ToString());
+
+                if (rdb_CorrectAnswer1.Checked)
+                {
+                    MessageBox.Show(a[1].ToString());
+                }
+                if (rdb_CorrectAnswer2.Checked)
+                {
+                    MessageBox.Show(a[2].ToString());
+                }
+                if (rdb_CorrectAnswer3.Checked)
+                {
+                    MessageBox.Show(a[3].ToString());
+                }
+                if (rdb_CorrectAnswer4.Checked)
+                {
+                    MessageBox.Show(a[4].ToString());
+                }
+                
+                
+            }
+            else if (cmb_QuestType.SelectedIndex == 1)
+            {
+                a.Add(tbx_Question.Text);
+                a.Add(pb_Rep1.Image);
+                a.Add(pb_Rep2.Image);
+                a.Add(pb_Rep3.Image);
+                a.Add(pb_Rep4.Image);
+
+                MessageBox.Show(a[0].ToString());
+
+                if (rdb_CorrectAnswer1.Checked)
+                {
+                    pictureBox1.Image = (Image)a[1];
+                }
+                if (rdb_CorrectAnswer2.Checked)
+                {
+                    pictureBox1.Image = (Image)a[2];
+                }
+                if (rdb_CorrectAnswer3.Checked)
+                {
+                    pictureBox1.Image = (Image)a[3];
+                }
+                if (rdb_CorrectAnswer4.Checked)
+                {
+                    pictureBox1.Image = (Image)a[4];
+                }
             }
         }
 
@@ -163,5 +259,7 @@ namespace Projet_Quizz
         {
             btn_ValidChange();
         }
+
+        
     }
 }
