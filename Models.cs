@@ -43,7 +43,7 @@ namespace Projet_Quizz
                     this.Status = "Connecter";
                     
                 }
-                catch (Exception ex) 
+                catch (Exception) 
                 {
                     this.Status = "Error";
                 }
