@@ -90,10 +90,9 @@ namespace Projet_Quizz
 
                 while (ReadBdd.Read())
                 {
-                    foreach (string elem in Entete)
-                    {
-                        lst.Add(ReadBdd[elem].ToString());
-                    }
+                 
+                        lst.Add(ReadBdd[0].ToString());
+                    
                 }
             }
             return lst;
@@ -148,11 +147,21 @@ namespace Projet_Quizz
             BDDConnection.Close();
         }
 
-        public List<string> GetUserAndScore(string query)
+        public List<List<string>> GetUserAndScore(string query)
         {
             List<List<string>> listUserScore = new List<List<string>>();
 
-            query.Split(',');
+            if(query != "" && query != null)
+            {
+                SqlToSend = BDDConnection.CreateCommand();
+                SqlToSend.CommandText = query;
+                ReadBdd = SqlToSend.ExecuteReader();
+
+                while (ReadBdd.Read())
+                {
+                    //listUserScore.Add(new List<string>{})
+                }
+            }           
 
             return listUserScore;
 
