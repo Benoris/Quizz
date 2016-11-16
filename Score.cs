@@ -20,13 +20,20 @@ namespace Projet_Quizz
             InitializeComponent();
            
             model.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
+
+            foreach (var item in model.ReadDataBase("SELECT `NameUser`FROM `tusers`"))
+            {
+                lsb_ListeJoueur.Items.Add(item);
+            }
+
+            model.CloseConnectionWithBDD();
         }
 
         private void Score_Load(object sender, EventArgs e)
         {
 
 
-            list2.Add(new List<string> { "Leila", "30" });
+            /*list2.Add(new List<string> { "Leila", "30" });
             list2.Add(new List<string> { "Hulk", "50" });
             list2.Add(new List<string> { "Tony", "100" });
             list2.Add(new List<string> { "Bob", "48" });
@@ -34,14 +41,14 @@ namespace Projet_Quizz
             for (int i = 0; i < list2.Count; i++)
             {
                 lsb_ListeJoueur.Items.Add(list2[i][0]);
-            }
+            }*/
 
             lbl_Connect.Text = model.Status;
         }
 
         private void lsb_ListeJoueur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbl_NumScore.Text = list2[lsb_ListeJoueur.SelectedIndex][1];
+            //lbl_NumScore.Text = list2[lsb_ListeJoueur.SelectedIndex][1];
         }
     }
 }

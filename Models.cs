@@ -99,8 +99,8 @@ namespace Projet_Quizz
             return lst;
         }
 
-        //==============================================================================================================================//
-        //=============================================================================================================================//
+//==============================================================================================================================//
+//=============================================================================================================================//
 
         /// <summary>
         /// 
@@ -141,5 +141,23 @@ namespace Projet_Quizz
                 SqlToSend.ExecuteNonQuery();
             }
         }
+
+        //Cette methode ferme la connection à la base de données
+        public void CloseConnectionWithBDD()
+        {
+            BDDConnection.Close();
+        }
+
+        public List<string> GetUserAndScore(string query)
+        {
+            List<List<string>> listUserScore = new List<List<string>>();
+
+            query.Split(',');
+
+            return listUserScore;
+
+        }
+
+
     }
 }
