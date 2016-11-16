@@ -34,6 +34,8 @@
             this.rdb_rp2 = new System.Windows.Forms.RadioButton();
             this.rdb_rp3 = new System.Windows.Forms.RadioButton();
             this.rdb_rp4 = new System.Windows.Forms.RadioButton();
+            this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_Quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_Question
@@ -89,11 +91,33 @@
             this.rdb_rp4.Text = "2020";
             this.rdb_rp4.UseVisualStyleBackColor = true;
             // 
+            // btn_Next
+            // 
+            this.btn_Next.Location = new System.Drawing.Point(475, 325);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.TabIndex = 5;
+            this.btn_Next.Text = "Suivant";
+            this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // btn_Quit
+            // 
+            this.btn_Quit.Location = new System.Drawing.Point(13, 325);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Quit.TabIndex = 6;
+            this.btn_Quit.Text = "Quitter";
+            this.btn_Quit.UseVisualStyleBackColor = true;
+            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            // 
             // Jeux
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 360);
+            this.Controls.Add(this.btn_Quit);
+            this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.rdb_rp4);
             this.Controls.Add(this.rdb_rp3);
             this.Controls.Add(this.rdb_rp2);
@@ -114,5 +138,7 @@
         private System.Windows.Forms.RadioButton rdb_rp2;
         private System.Windows.Forms.RadioButton rdb_rp3;
         private System.Windows.Forms.RadioButton rdb_rp4;
+        private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_Quit;
     }
 }
