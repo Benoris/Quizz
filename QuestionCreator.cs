@@ -12,13 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 
 namespace Projet_Quizz
 {
     public partial class QuestionCreator : Form
     {
-
+        Models model = new Models();
         List<TextBox> list_TbxAnswers = new List<TextBox>();
         
 
@@ -167,9 +168,10 @@ namespace Projet_Quizz
                 connectionBase.Close();
                 MessageBox.Show("Connection Fermée");
             }*/
+            a.Add(tbx_Question.Text);
+
             if (cmb_QuestType.SelectedIndex == 0)
             {
-                a.Add(tbx_Question.Text);
                 a.Add(tbx_Rep1.Text);
                 a.Add(tbx_Rep2.Text);
                 a.Add(tbx_Rep3.Text);
@@ -193,16 +195,21 @@ namespace Projet_Quizz
                 {
                     MessageBox.Show(a[4].ToString());
                 }
-                
+
+                model.WirteDataBase2("d", a);
                 
             }
             else if (cmb_QuestType.SelectedIndex == 1)
             {
-                a.Add(tbx_Question.Text);
+                ImageConverter converter = new ImageConverter();
+                a.Add((byte[])converter.ConvertTo(pb_Rep1.Image, typeof(byte[])));
+
                 a.Add(pb_Rep1.Image);
                 a.Add(pb_Rep2.Image);
                 a.Add(pb_Rep3.Image);
                 a.Add(pb_Rep4.Image);
+
+                
 
                 MessageBox.Show(a[0].ToString());
 
@@ -222,6 +229,16 @@ namespace Projet_Quizz
                 {
                     pictureBox1.Image = (Image)a[4];
                 }
+
+                model.WirteDataBase2("d", a);
+                //pictureBox1.Image = (Image)model.readBd2()[0];
+
+                MemoryStream mStream = new MemoryStream();
+                byte[] pData = (byte[])model.readBd2()[0];
+                mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+                Bitmap bm = new Bitmap(mStream);
+                mStream.Dispose();
+                pictureBox1.Image = bm;
             }
         }
 

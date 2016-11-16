@@ -1,10 +1,13 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.IO;
+using System.Data;
 
 namespace Projet_Quizz
 {
@@ -107,7 +110,7 @@ namespace Projet_Quizz
         /// <param name="Sql"></param>
         /// Veuillez écrire la requetes dans se style : INSERT INTO projets(NomProjet,idProjet) VALUES(@Prenom,@1)
         /// !!!!!!ATTENTION A NE PAS METTRE D'ESPACE APRES LES VIRGULES!!!!!!
-        public void WriteDataBase(string Sql, List<string> ListValeurs)
+        public void WriteDataBase(string Sql, List<object> ListValeurs)
         {
             string Entete;//Création du string qui contien tout les éléments valeur variable (@Elem1) que la commande sql va envoyer
             List<string> Values = new List<string>();
@@ -139,6 +142,42 @@ namespace Projet_Quizz
                 }
                 SqlToSend.ExecuteNonQuery();
             }
+        }
+
+        public void WirteDataBase2(string Sql, List<object> values)
+        {
+            this.StartConnectionWithBDD("10.134.181.213","Quizz","Quizz","SuperC101");
+            SqlToSend = BDDConnection.CreateCommand();
+            SqlToSend.CommandText = "INSERT INTO ttest (imgtest) VALUES (@name)";
+            SqlToSend.Parameters.AddWithValue("@name", values[1]);
+            //SqlToSend.Parameters.Add("@name", MySqlDbType.Blob);
+            //SqlToSend.Parameters["@name"].Value = (Image)values[1];
+            SqlToSend.ExecuteNonQuery();
+            BDDConnection.Close();
+        }
+
+        public List<object> readBd2()
+        {
+            List<object> e = new List<object>();
+
+            this.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
+
+            SqlToSend = new MySqlCommand("SELECT imgtest FROM ttest", BDDConnection);
+
+            SqlToSend.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT imgtest FROM ttest", BDDConnection);
+            sda.Fill(dt);
+
+            byte[] bits = new byte[0];
+            bits = (byte[])dt.Rows[6][0];
+
+            //MemoryStream ms = new MemoryStream(bits,23,bits.Length - 23);
+
+            //Image a = Bitmap.FromStream(ms);
+            e.Add(bits);
+
+            return e;
         }
 
         //Cette methode ferme la connection à la base de données
