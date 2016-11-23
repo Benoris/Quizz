@@ -62,6 +62,7 @@
             this.btn_QuitterScore.TabIndex = 5;
             this.btn_QuitterScore.Text = "Quitter";
             this.btn_QuitterScore.UseVisualStyleBackColor = true;
+            this.btn_QuitterScore.Click += new System.EventHandler(this.btn_QuitterScore_Click);
             // 
             // lbl_NumScore
             // 

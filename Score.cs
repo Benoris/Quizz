@@ -52,5 +52,10 @@ namespace Projet_Quizz
             lbl_NumScore.Text = list2[lsb_ListeJoueur.SelectedIndex][1];
             
         }
+
+        private void btn_QuitterScore_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
