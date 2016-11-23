@@ -21,9 +21,10 @@ namespace Projet_Quizz
            
             model.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
 
-            foreach (var item in model.ReadDataBase("SELECT `NameUser`FROM `tusers`"))
+            foreach (List<string> item in model.GetTextData("SELECT `NameUser`, `Score` FROM `tuser`"))
             {
-                lsb_ListeJoueur.Items.Add(item);
+                list2.Add(item);
+                lsb_ListeJoueur.Items.Add(item[0]);
             }
 
             model.CloseConnectionWithBDD();
@@ -48,7 +49,8 @@ namespace Projet_Quizz
 
         private void lsb_ListeJoueur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //lbl_NumScore.Text = list2[lsb_ListeJoueur.SelectedIndex][1];
+            lbl_NumScore.Text = list2[lsb_ListeJoueur.SelectedIndex][1];
+            
         }
     }
 }

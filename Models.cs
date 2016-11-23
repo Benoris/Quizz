@@ -186,7 +186,7 @@ namespace Projet_Quizz
             BDDConnection.Close();
         }
 
-        public List<List<string>> GetUserAndScore(string query)
+        public List<List<string>> GetTextData(string query)
         {
             List<List<string>> listUserScore = new List<List<string>>();
 
@@ -198,7 +198,13 @@ namespace Projet_Quizz
 
                 while (ReadBdd.Read())
                 {
-                    //listUserScore.Add(new List<string>{})
+                    List<string> a = new List<string>();                    
+
+                    for (int i = 0; i < ReadBdd.FieldCount/*compte les colones (les champs)*/; i++)
+                    {
+                        a.Add(ReadBdd[i].ToString());
+                    }
+                    listUserScore.Add(a);
                 }
             }           
 
