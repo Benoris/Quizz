@@ -144,7 +144,7 @@ namespace Projet_Quizz
             }
         }
 
-        public void WirteDataBase2(string Sql, List<object> values)
+        public void WirtePicturesInDataBase(string Sql, List<object> values)
         {
             this.StartConnectionWithBDD("10.134.181.213","Quizz","Quizz","SuperC101");
             SqlToSend = BDDConnection.CreateCommand();
@@ -156,26 +156,32 @@ namespace Projet_Quizz
             BDDConnection.Close();
         }
 
-        public List<object> readBd2()
+        public List<object> ReadPicturesInDataBase(string sql)
         {
             List<object> e = new List<object>();
 
             this.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
 
-            SqlToSend = new MySqlCommand("SELECT imgtest FROM ttest", BDDConnection);
+            SqlToSend = new MySqlCommand(sql, BDDConnection);
 
             SqlToSend.ExecuteNonQuery();
             DataTable dt = new DataTable();
-            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT imgtest FROM ttest", BDDConnection);
+            MySqlDataAdapter sda = new MySqlDataAdapter(sql, BDDConnection);
             sda.Fill(dt);
 
-            byte[] bits = new byte[0];
-            bits = (byte[])dt.Rows[6][0];
+            //byte[] bits = new byte[0];
+
+            foreach (byte[] item in dt.Rows)
+            {
+                e.Add(item[0]);
+            }
+
+            //bits = (byte[])dt.Rows[6][0];
 
             //MemoryStream ms = new MemoryStream(bits,23,bits.Length - 23);
 
             //Image a = Bitmap.FromStream(ms);
-            e.Add(bits);
+            //e.Add(bits);
 
             return e;
         }

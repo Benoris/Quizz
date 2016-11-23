@@ -196,7 +196,7 @@ namespace Projet_Quizz
                     MessageBox.Show(a[4].ToString());
                 }
 
-                model.WirteDataBase2("d", a);
+                model.WirtePicturesInDataBase("d", a);
                 
             }
             else if (cmb_QuestType.SelectedIndex == 1)
@@ -230,11 +230,11 @@ namespace Projet_Quizz
                     pictureBox1.Image = (Image)a[4];
                 }
 
-                model.WirteDataBase2("d", a);
+                model.WirtePicturesInDataBase("d", a);
                 //pictureBox1.Image = (Image)model.readBd2()[0];
 
                 MemoryStream mStream = new MemoryStream();
-                byte[] pData = (byte[])model.readBd2()[0];
+                byte[] pData = (byte[])model.ReadPicturesInDataBase("SELECT imgtest FROM ttest")[0];
                 mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
                 Bitmap bm = new Bitmap(mStream);
                 mStream.Dispose();
