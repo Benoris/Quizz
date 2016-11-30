@@ -99,9 +99,9 @@ namespace Projet_Quizz
         }
 //===============================================================================================================================================//
 //==============================================================================================================================================// 
-        public List<object> ReadPicturesInDataBase(string sql)
+        public List<List<object>> ReadAnswersInDataBase(string sql)
         {
-            List<object> e = new List<object>();
+            List<List<object>> e = new List<List<object>>();
 
             this.StartConnectionWithBDD(this._IpBdd, this._DataBase, this._User, this._Password);
 
@@ -116,7 +116,12 @@ namespace Projet_Quizz
 
             foreach (DataRow item in dt.Rows)
             {
-                e.Add(item[0]);
+                List<object> heu = new List<object>();
+                foreach (object item2 in item.ItemArray)
+                {
+                    heu.Add(item2);
+                }
+                e.Add(heu);
             }
 
             //bits = (byte[])dt.Rows[6][0];
