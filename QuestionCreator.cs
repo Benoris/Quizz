@@ -28,8 +28,6 @@ namespace Projet_Quizz
             InitializeComponent();
             cmb_QuestType.SelectedIndex = 0;
 
-            MessageBox.Show(model.ReadAnswersInDataBase("SELECT * FROM tanswer")[10][1].ToString());
-
             foreach (Control item in this.Controls)
             {
                 if (item is TextBox)
