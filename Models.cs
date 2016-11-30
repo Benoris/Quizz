@@ -101,13 +101,7 @@ namespace Projet_Quizz
             //e.Add(bits);
 
             return e;
-        }
-
-        //Cette methode ferme la connection à la base de données
-        public void CloseConnectionWithBDD()
-        {
-            BDDConnection.Close();
-        }
+        }        
 
         public List<List<string>> GetTextData(string query)
         {
