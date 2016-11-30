@@ -106,7 +106,7 @@ namespace Projet_Quizz
             this.StartConnectionWithBDD(this._IpBdd, this._DataBase, this._User, this._Password);
 
             SqlToSend = new MySqlCommand(sql, BDDConnection);
-
+            //
             SqlToSend.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter sda = new MySqlDataAdapter(sql, BDDConnection);
