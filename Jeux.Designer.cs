@@ -126,6 +126,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Jeux";
             this.Text = "Jeux";
+            this.Load += new System.EventHandler(this.Jeux_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

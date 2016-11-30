@@ -27,7 +27,19 @@ namespace Projet_Quizz
         }
 
         private void Score_Load(object sender, EventArgs e)
-        {           
+        {
+
+
+            /*list2.Add(new List<string> { "Leila", "30" });
+            list2.Add(new List<string> { "Hulk", "50" });
+            list2.Add(new List<string> { "Tony", "100" });
+            list2.Add(new List<string> { "Bob", "48" });
+            
+            for (int i = 0; i < list2.Count; i++)
+            {
+                lsb_ListeJoueur.Items.Add(list2[i][0]);
+            }*/
+
             lbl_Connect.Text = model.Status;
         }
 

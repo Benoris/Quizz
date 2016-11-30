@@ -57,7 +57,5 @@ namespace Projet_Quizz
                 
             }
         }
-        
-
     }
 }
