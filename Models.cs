@@ -59,95 +59,7 @@ namespace Projet_Quizz
         }
 
         //===============================================================================================================================================//
-        //==============================================================================================================================================//
-
-        /// <summary>
-        /// Cette methode envoie une commande Sql à la base et nous retourne le résultat de la commande dans une liste.
-        /// !!!!! Ne pas Metre de " ' ou ` !!!!!
-        /// La bonne syntaxe est : SELECT Prenom, id FROM table
-        /// </summary>
-        /// <param name="Sql">La commande sql</param>
-        /// <returns>Retourne une liste qvec le resultat de la requette</returns>
-        public List<string> ReadDataBase(string Sql)
-        {
-            List<string> lst = new List<string>();//Création de la liste qui sera renvoyer
-            List<string> Entete = new List<string>();//Création de la liste qui contien tout les éléments que la commande sql va renvoyer
-
-            char[] Delimiteurs = { ' ', ',' };//Tableau de delimiteur
-            string[] Mots = Sql.Split(Delimiteurs);//Tableau avec la commande sql
-
-            //Création de la liste qui contien uniquement le nom de la colonne
-            foreach (string Col in Mots)
-            {
-                if (Col != "" && Col != "from" && Col != "FROM"
-                    && Col != "SELECT" && Col != "select")
-                {
-                    Entete.Add(Col);
-                }
-                else if (Col == "FROM" || Col == "from")
-                {
-                    break;
-                }
-            }
-
-            if (Sql != "" && Sql != null)
-            {
-                SqlToSend = BDDConnection.CreateCommand();
-                SqlToSend.CommandText = Sql;
-                ReadBdd = SqlToSend.ExecuteReader();
-
-                while (ReadBdd.Read())
-                {
-                 
-                        lst.Add(ReadBdd[0].ToString());
-                    
-                }
-            }
-            return lst;
-        }
-
-//==============================================================================================================================//
-//=============================================================================================================================//
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Sql"></param>
-        /// Veuillez écrire la requetes dans se style : INSERT INTO projets(NomProjet,idProjet) VALUES(@Prenom,@1)
-        /// !!!!!!ATTENTION A NE PAS METTRE D'ESPACE APRES LES VIRGULES!!!!!!
-        public void WriteDataBase(string Sql, List<object> ListValeurs)
-        {
-            string Entete;//Création du string qui contien tout les éléments valeur variable (@Elem1) que la commande sql va envoyer
-            List<string> Values = new List<string>();
-
-            char[] Delimiteurs = { ' ' };//Tableau de delimiteur
-            string[] Mots = Sql.Split(Delimiteurs);//Tableau avec la commande sql
-
-            Entete = Mots[3];
-
-            char[] Delimiteurs2 = { '(', ')', ',' };
-            string[] Vals = Entete.Split(Delimiteurs2);
-
-            //Création de la liste qui contien uniquement le nom des valeurs variables
-            foreach (string col in Vals)
-            {
-                if (col.StartsWith("@"))
-                {
-                    Values.Add(col);
-                }
-            }
-
-            if (Sql != "" && Sql != null)
-            {
-                SqlToSend = BDDConnection.CreateCommand();
-                SqlToSend.CommandText = Sql;
-                for (int i = 0; i < Values.Count(); i++)
-                {
-                    SqlToSend.Parameters.AddWithValue(Values[i], ListValeurs[i]);
-                }
-                SqlToSend.ExecuteNonQuery();
-            }
-        }
+        //==============================================================================================================================================//        
 
         public void WirtePicturesInDataBase(string Sql, List<object> values)
         {
@@ -199,6 +111,8 @@ namespace Projet_Quizz
 
         public List<List<string>> GetTextData(string query)
         {
+            this.StartConnectionWithBDD(this._IpBdd, this._DataBase, this._User, this._Password);
+
             List<List<string>> listUserScore = new List<List<string>>();
 
             if(query != "" && query != null)
@@ -221,6 +135,7 @@ namespace Projet_Quizz
 
             return listUserScore;
 
+            BDDConnection.Close();
         }
 
 

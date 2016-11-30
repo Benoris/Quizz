@@ -17,17 +17,13 @@ namespace Projet_Quizz
         
         public Score()
         {
-            InitializeComponent();
-           
-            model.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
+            InitializeComponent();                       
 
             foreach (List<string> item in model.GetTextData("SELECT `NameUser`, `Score` FROM `tuser`"))
             {
                 list2.Add(item);
                 lsb_ListeJoueur.Items.Add(item[0]);
-            }
-
-            model.CloseConnectionWithBDD();
+            }            
         }
 
         private void Score_Load(object sender, EventArgs e)
