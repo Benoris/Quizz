@@ -21,7 +21,7 @@ namespace Projet_Quizz
     {
         Models model = new Models();
         List<TextBox> list_TbxAnswers = new List<TextBox>();
-        
+
 
         public QuestionCreator()
         {
@@ -113,7 +113,7 @@ namespace Projet_Quizz
                 changeEnableState(btn_OpenImage3, false);
                 changeEnableState(btn_OpenImage4, false);
             }
-            else if((sender as ComboBox).SelectedIndex == 1)
+            else if ((sender as ComboBox).SelectedIndex == 1)
             {
                 //To disable
                 changeEnableState(tbx_Rep1, false);
@@ -133,7 +133,7 @@ namespace Projet_Quizz
             }
 
             btn_ValidChange();
-            
+
         }
 
         public void changeEnableState(Control a, bool enableOrNot)
@@ -144,80 +144,128 @@ namespace Projet_Quizz
         private void btn_AddQuestion_Click(object sender, EventArgs e)
         {
             List<object> Questions = new List<object>();
-            List<object> Reponses = new List<object>();
+            List<List<object>> Reponses = new List<List<object>>();
 
             Questions.Add(tbx_Question.Text);
 
+            int lastQuestionId = model.WriteQuestionInDataBase("INSERT INTO tquestion (Question) VALUES", Questions);
+            int fau = 0;
+
             if (cmb_QuestType.SelectedIndex == 0)
             {
-                Reponses.Add(tbx_Rep1.Text);
-                Reponses.Add(tbx_Rep2.Text);
-                Reponses.Add(tbx_Rep3.Text);
-                Reponses.Add(tbx_Rep4.Text);
+                List<object> l1 = new List<object>();
+                List<object> l2 = new List<object>();
+                List<object> l3 = new List<object>();
+                List<object> l4 = new List<object>();
 
-                MessageBox.Show(Questions[0].ToString());
+                l1.Add(tbx_Rep1.Text);
+                l2.Add(tbx_Rep2.Text);
+                l3.Add(tbx_Rep3.Text);
+                l4.Add(tbx_Rep4.Text);
+
+                l1.Add(fau);
+                l2.Add(fau);
+                l3.Add(fau);
+                l4.Add(fau);
+
+                l1.Add(lastQuestionId);
+                l2.Add(lastQuestionId);
+                l3.Add(lastQuestionId);
+                l4.Add(lastQuestionId);
 
                 if (rdb_CorrectAnswer1.Checked)
                 {
-                    MessageBox.Show(Questions[1].ToString());
+                    //MessageBox.Show(Questions[1].ToString());
+                    l1[1] = 1;
                 }
                 if (rdb_CorrectAnswer2.Checked)
                 {
-                    MessageBox.Show(Questions[2].ToString());
+                    //MessageBox.Show(Questions[2].ToString());
+                    l2[1] = 1;
                 }
                 if (rdb_CorrectAnswer3.Checked)
                 {
-                    MessageBox.Show(Questions[3].ToString());
+                    //MessageBox.Show(Questions[3].ToString());
+                    l3[1] = 1;
                 }
                 if (rdb_CorrectAnswer4.Checked)
                 {
-                    MessageBox.Show(Questions[4].ToString());
+                    //MessageBox.Show(Questions[4].ToString());
+                    l4[1] = 1;
                 }
 
-                model.WirtePicturesInDataBase("d", Questions);
-                
+                Reponses.Add(l1);
+                Reponses.Add(l2);
+                Reponses.Add(l3);
+                Reponses.Add(l4);
+
+                model.WirteAnswersInDataBase("INSERT INTO tanswer (Answer,isCorrect,idQuestion) VALUES", Reponses);
+
             }
             else if (cmb_QuestType.SelectedIndex == 1)
             {
                 ImageConverter converter = new ImageConverter();
-                Reponses.Add((byte[])converter.ConvertTo(pb_Rep1.Image, typeof(byte[])));
 
-                Reponses.Add(pb_Rep1.Image);
-                Reponses.Add(pb_Rep2.Image);
-                Reponses.Add(pb_Rep3.Image);
-                Reponses.Add(pb_Rep4.Image);
+                List<object> l1 = new List<object>();
+                List<object> l2 = new List<object>();
+                List<object> l3 = new List<object>();
+                List<object> l4 = new List<object>();
 
-                
+                l1.Add((byte[])converter.ConvertTo(pb_Rep1.Image, typeof(byte[])));
+                l2.Add((byte[])converter.ConvertTo(pb_Rep2.Image, typeof(byte[])));
+                l3.Add((byte[])converter.ConvertTo(pb_Rep3.Image, typeof(byte[])));
+                l4.Add((byte[])converter.ConvertTo(pb_Rep4.Image, typeof(byte[])));
 
-                MessageBox.Show(Questions[0].ToString());
+                l1.Add(fau);
+                l2.Add(fau);
+                l3.Add(fau);
+                l4.Add(fau);
+
+                l1.Add(lastQuestionId);
+                l2.Add(lastQuestionId);
+                l3.Add(lastQuestionId);
+                l4.Add(lastQuestionId);
 
                 if (rdb_CorrectAnswer1.Checked)
                 {
-                    pictureBox1.Image = (Image)Questions[1];
+                    //MessageBox.Show(Questions[1].ToString());
+                    l1[1] = 1;
                 }
                 if (rdb_CorrectAnswer2.Checked)
                 {
-                    pictureBox1.Image = (Image)Questions[2];
+                    //MessageBox.Show(Questions[2].ToString());
+                    l2[1] = 1;
                 }
                 if (rdb_CorrectAnswer3.Checked)
                 {
-                    pictureBox1.Image = (Image)Questions[3];
+                    //MessageBox.Show(Questions[3].ToString());
+                    l3[1] = 1;
                 }
                 if (rdb_CorrectAnswer4.Checked)
                 {
-                    pictureBox1.Image = (Image)Questions[4];
+                    //MessageBox.Show(Questions[4].ToString());
+                    l4[1] = 1;
                 }
 
-                model.WirtePicturesInDataBase("d", Questions);
+                Reponses.Add(l1);
+                Reponses.Add(l2);
+                Reponses.Add(l3);
+                Reponses.Add(l4);
+
+                model.WirteAnswersInDataBase("INSERT INTO tanswer (Image,isCorrect,idQuestion) VALUES", Reponses);
                 //pictureBox1.Image = (Image)model.readBd2()[0];
 
-                MemoryStream mStream = new MemoryStream();
-                byte[] pData = (byte[])model.ReadPicturesInDataBase("SELECT imgtest FROM ttest")[0];
+                /*MemoryStream mStream = new MemoryStream();
+                byte[] pData = (byte[])model.ReadPicturesInDataBase("SELECT imgtest FROM ttest")[8];
                 mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
                 Bitmap bm = new Bitmap(mStream);
                 mStream.Dispose();
-                pictureBox1.Image = bm;
+                pictureBox1.Image = bm;*/
+
             }
+
+            resetView();
+
         }
 
         private void btn_ValidChange()
@@ -255,6 +303,20 @@ namespace Projet_Quizz
             btn_ValidChange();
         }
 
-        
+        private void resetView()
+        {
+            tbx_Question.Text = "";
+            tbx_Rep1.Text = "";
+            tbx_Rep2.Text = "";
+            tbx_Rep3.Text = "";
+            tbx_Rep4.Text = "";
+
+            pb_Rep1.Image = null;
+            pb_Rep2.Image = null;
+            pb_Rep3.Image = null;
+            pb_Rep4.Image = null;
+        }
+
+
     }
 }

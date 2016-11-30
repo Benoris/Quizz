@@ -62,16 +62,40 @@ namespace Projet_Quizz
 //===============================================================================================================================================//
 //==============================================================================================================================================//        
 
-        public void WirtePicturesInDataBase(string Sql, List<object> values)
+        public void WirteAnswersInDataBase(string SqlParam, List<List<object>> values)
         {
             this.StartConnectionWithBDD(this._IpBdd,this._DataBase,this._User,this._Password);
             SqlToSend = BDDConnection.CreateCommand();
-            SqlToSend.CommandText = "INSERT INTO ttest (imgtest) VALUES (@name)";
-            SqlToSend.Parameters.AddWithValue("@name", values[1]);
-            //SqlToSend.Parameters.Add("@name", MySqlDbType.Blob);
-            //SqlToSend.Parameters["@name"].Value = (Image)values[1];
-            SqlToSend.ExecuteNonQuery();
+
+            for (int i = 0; i < values.Count; i++)
+            {
+                SqlToSend.CommandText = SqlParam + " (@name" + i + ", @isTrue" + i + ", @idQuestion" + i + ")";
+                SqlToSend.Parameters.AddWithValue("@name"+i, values[i][0]);
+                SqlToSend.Parameters.AddWithValue("@isTrue" + i, values[i][1]);
+                SqlToSend.Parameters.AddWithValue("@idQuestion" + i, values[i][2]);
+                SqlToSend.ExecuteNonQuery();
+            }
+            
             BDDConnection.Close();
+        }
+
+        public int WriteQuestionInDataBase(string SqlParam, List<object> values)
+        {
+            this.StartConnectionWithBDD(this._IpBdd, this._DataBase, this._User, this._Password);
+            SqlToSend = BDDConnection.CreateCommand();
+
+            for (int i = 0; i < values.Count; i++)
+            {
+                SqlToSend.CommandText = SqlParam+" (@name"+i+")";
+                SqlToSend.Parameters.AddWithValue("@name"+i, values[i]);
+                SqlToSend.ExecuteNonQuery();
+            }
+
+            long a = SqlToSend.LastInsertedId;
+
+            BDDConnection.Close();
+
+            return (int)a;
         }
 //===============================================================================================================================================//
 //==============================================================================================================================================// 
@@ -90,7 +114,7 @@ namespace Projet_Quizz
 
             //byte[] bits = new byte[0];
 
-            foreach (byte[] item in dt.Rows)
+            foreach (DataRow item in dt.Rows)
             {
                 e.Add(item[0]);
             }
