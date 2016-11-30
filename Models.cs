@@ -131,11 +131,11 @@ namespace Projet_Quizz
                     }
                     listUserScore.Add(a);
                 }
-            }           
+            }
+            BDDConnection.Close();
 
             return listUserScore;
-
-            BDDConnection.Close();
+            
         }
 
 
