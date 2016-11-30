@@ -143,94 +143,72 @@ namespace Projet_Quizz
 
         private void btn_AddQuestion_Click(object sender, EventArgs e)
         {
-            List<object> a = new List<object>();
-            /*string ConnexionString = "SERVER=10.134.181.213; DATABASE=Quizz; UID=Quizz; PASSWORD=SuperC101";
-            MySqlConnection connectionBase = new MySqlConnection(ConnexionString);
+            List<object> Questions = new List<object>();
+            List<object> Reponses = new List<object>();
 
-            try
-            {
-                connectionBase.Open();
-                MessageBox.Show("Connection Ouverte");
-
-                //MySqlCommand commande = connectionBase.CreateCommand();
-
-                //commande.CommandText = "INSERT INTO `tquestion`(`TextQuestion`) VALUES ('Test Question 2')";
-                //commande.ExecuteNonQuery();
-                //connectionBase.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            finally
-            {
-                connectionBase.Close();
-                MessageBox.Show("Connection Fermée");
-            }*/
-            a.Add(tbx_Question.Text);
+            Questions.Add(tbx_Question.Text);
 
             if (cmb_QuestType.SelectedIndex == 0)
             {
-                a.Add(tbx_Rep1.Text);
-                a.Add(tbx_Rep2.Text);
-                a.Add(tbx_Rep3.Text);
-                a.Add(tbx_Rep4.Text);
+                Reponses.Add(tbx_Rep1.Text);
+                Reponses.Add(tbx_Rep2.Text);
+                Reponses.Add(tbx_Rep3.Text);
+                Reponses.Add(tbx_Rep4.Text);
 
-                MessageBox.Show(a[0].ToString());
+                MessageBox.Show(Questions[0].ToString());
 
                 if (rdb_CorrectAnswer1.Checked)
                 {
-                    MessageBox.Show(a[1].ToString());
+                    MessageBox.Show(Questions[1].ToString());
                 }
                 if (rdb_CorrectAnswer2.Checked)
                 {
-                    MessageBox.Show(a[2].ToString());
+                    MessageBox.Show(Questions[2].ToString());
                 }
                 if (rdb_CorrectAnswer3.Checked)
                 {
-                    MessageBox.Show(a[3].ToString());
+                    MessageBox.Show(Questions[3].ToString());
                 }
                 if (rdb_CorrectAnswer4.Checked)
                 {
-                    MessageBox.Show(a[4].ToString());
+                    MessageBox.Show(Questions[4].ToString());
                 }
 
-                model.WirtePicturesInDataBase("d", a);
+                model.WirtePicturesInDataBase("d", Questions);
                 
             }
             else if (cmb_QuestType.SelectedIndex == 1)
             {
                 ImageConverter converter = new ImageConverter();
-                a.Add((byte[])converter.ConvertTo(pb_Rep1.Image, typeof(byte[])));
+                Reponses.Add((byte[])converter.ConvertTo(pb_Rep1.Image, typeof(byte[])));
 
-                a.Add(pb_Rep1.Image);
-                a.Add(pb_Rep2.Image);
-                a.Add(pb_Rep3.Image);
-                a.Add(pb_Rep4.Image);
+                Reponses.Add(pb_Rep1.Image);
+                Reponses.Add(pb_Rep2.Image);
+                Reponses.Add(pb_Rep3.Image);
+                Reponses.Add(pb_Rep4.Image);
 
                 
 
-                MessageBox.Show(a[0].ToString());
+                MessageBox.Show(Questions[0].ToString());
 
                 if (rdb_CorrectAnswer1.Checked)
                 {
-                    pictureBox1.Image = (Image)a[1];
+                    pictureBox1.Image = (Image)Questions[1];
                 }
                 if (rdb_CorrectAnswer2.Checked)
                 {
-                    pictureBox1.Image = (Image)a[2];
+                    pictureBox1.Image = (Image)Questions[2];
                 }
                 if (rdb_CorrectAnswer3.Checked)
                 {
-                    pictureBox1.Image = (Image)a[3];
+                    pictureBox1.Image = (Image)Questions[3];
                 }
                 if (rdb_CorrectAnswer4.Checked)
                 {
-                    pictureBox1.Image = (Image)a[4];
+                    pictureBox1.Image = (Image)Questions[4];
                 }
 
-                model.WirtePicturesInDataBase("d", a);
+                model.WirtePicturesInDataBase("d", Questions);
                 //pictureBox1.Image = (Image)model.readBd2()[0];
 
                 MemoryStream mStream = new MemoryStream();

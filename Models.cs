@@ -14,6 +14,11 @@ namespace Projet_Quizz
     class Models
     {
 
+        private string _IpBdd = "10.134.180.111";
+        private string _User = "Quizz";
+        private string _Password = "SuperC101";
+        private string _DataBase = "Quizz";
+
         private string _status = "";       
 
         public string Status
@@ -146,7 +151,7 @@ namespace Projet_Quizz
 
         public void WirtePicturesInDataBase(string Sql, List<object> values)
         {
-            this.StartConnectionWithBDD("10.134.181.213","Quizz","Quizz","SuperC101");
+            this.StartConnectionWithBDD(this._IpBdd,this._DataBase,this._User,this._Password);
             SqlToSend = BDDConnection.CreateCommand();
             SqlToSend.CommandText = "INSERT INTO ttest (imgtest) VALUES (@name)";
             SqlToSend.Parameters.AddWithValue("@name", values[1]);
@@ -160,7 +165,7 @@ namespace Projet_Quizz
         {
             List<object> e = new List<object>();
 
-            this.StartConnectionWithBDD("10.134.181.213", "Quizz", "Quizz", "SuperC101");
+            this.StartConnectionWithBDD(this._IpBdd, this._DataBase, this._User, this._Password);
 
             SqlToSend = new MySqlCommand(sql, BDDConnection);
 
