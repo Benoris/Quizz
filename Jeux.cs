@@ -23,7 +23,7 @@ namespace Projet_Quizz
         public Jeux()
         {
             InitializeComponent();
-            MessageBox.Show(models.ReadPicturesInDataBase("SELECT Question FROM tquestion")[0].ToString());
+            MessageBox.Show(models.ReadAnswersInDataBase("SELECT Question FROM tquestion")[0].ToString());
 
         }
 
