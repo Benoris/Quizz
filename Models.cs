@@ -62,7 +62,7 @@ namespace Projet_Quizz
 //===============================================================================================================================================//
 //==============================================================================================================================================//        
 
-        public void WirteAnswersInDataBase(string SqlParam, List<List<object>> values)
+        public void WriteAnswersInDataBase(string SqlParam, List<List<object>> values)
         {
             this.StartConnectionWithBDD(this._IpBdd,this._DataBase,this._User,this._Password);
             SqlToSend = BDDConnection.CreateCommand();
