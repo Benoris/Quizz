@@ -27,18 +27,6 @@ namespace Projet_Quizz
         {
             InitializeComponent();
             cmb_QuestType.SelectedIndex = 0;
-
-            foreach (Control item in this.Controls)
-            {
-                if (item is TextBox)
-                {
-                    /*if((item as TextBox).Name.ToLower().Contains(''))
-                    {
-                        //comp = StringComparison.OrdinalIgnoreCase;
-                        //Console.WriteLine("   {0:G}: {1}", comp, s.Contains(sub1, comp));
-                    }*/
-                }
-            }
         }
 
         private void btn_OpenImage1_Click(object sender, EventArgs e)
