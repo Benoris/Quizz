@@ -187,7 +187,7 @@ namespace Projet_Quizz
                 Reponses.Add(l3);
                 Reponses.Add(l4);
 
-                model.WirteAnswersInDataBase("INSERT INTO tanswer (Answer,isCorrect,idQuestion) VALUES", Reponses);
+                model.WriteAnswersInDataBase("INSERT INTO tanswer (Answer,isCorrect,idQuestion) VALUES", Reponses);
 
             }
             else if (cmb_QuestType.SelectedIndex == 1)
@@ -240,7 +240,7 @@ namespace Projet_Quizz
                 Reponses.Add(l3);
                 Reponses.Add(l4);
 
-                model.WirteAnswersInDataBase("INSERT INTO tanswer (Image,isCorrect,idQuestion) VALUES", Reponses);
+                model.WriteAnswersInDataBase("INSERT INTO tanswer (Image,isCorrect,idQuestion) VALUES", Reponses);
                 //pictureBox1.Image = (Image)model.readBd2()[0];
 
                 /*MemoryStream mStream = new MemoryStream();
