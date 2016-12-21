@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jeux));
             this.lbl_Question = new System.Windows.Forms.Label();
-            this.rdb_rp1 = new System.Windows.Forms.RadioButton();
-            this.rdb_rp2 = new System.Windows.Forms.RadioButton();
-            this.rdb_rp3 = new System.Windows.Forms.RadioButton();
-            this.rdb_rp4 = new System.Windows.Forms.RadioButton();
             this.btn_Quit = new System.Windows.Forms.Button();
             this.pbx1 = new System.Windows.Forms.PictureBox();
             this.pbx2 = new System.Windows.Forms.PictureBox();
@@ -41,6 +37,11 @@
             this.pbx4 = new System.Windows.Forms.PictureBox();
             this.tbx_Name = new System.Windows.Forms.TextBox();
             this.lbl_Name = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lbl_rp1 = new System.Windows.Forms.Label();
+            this.lbl_rp2 = new System.Windows.Forms.Label();
+            this.lbl_rp3 = new System.Windows.Forms.Label();
+            this.lbl_rp4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx3)).BeginInit();
@@ -57,54 +58,6 @@
             this.lbl_Question.TabIndex = 0;
             this.lbl_Question.Text = "Comment s\'appelle le dernier Pirates des Caraïbes qui va sortir?";
             this.lbl_Question.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rdb_rp1
-            // 
-            this.rdb_rp1.AutoSize = true;
-            this.rdb_rp1.Location = new System.Drawing.Point(93, 182);
-            this.rdb_rp1.Name = "rdb_rp1";
-            this.rdb_rp1.Size = new System.Drawing.Size(49, 17);
-            this.rdb_rp1.TabIndex = 1;
-            this.rdb_rp1.TabStop = true;
-            this.rdb_rp1.Text = "2016";
-            this.rdb_rp1.UseVisualStyleBackColor = true;
-            this.rdb_rp1.Click += new System.EventHandler(this.btn_Next_Click);
-            // 
-            // rdb_rp2
-            // 
-            this.rdb_rp2.AutoSize = true;
-            this.rdb_rp2.Location = new System.Drawing.Point(93, 205);
-            this.rdb_rp2.Name = "rdb_rp2";
-            this.rdb_rp2.Size = new System.Drawing.Size(49, 17);
-            this.rdb_rp2.TabIndex = 2;
-            this.rdb_rp2.TabStop = true;
-            this.rdb_rp2.Text = "2017";
-            this.rdb_rp2.UseVisualStyleBackColor = true;
-            this.rdb_rp2.Click += new System.EventHandler(this.btn_Next_Click);
-            // 
-            // rdb_rp3
-            // 
-            this.rdb_rp3.AutoSize = true;
-            this.rdb_rp3.Location = new System.Drawing.Point(93, 228);
-            this.rdb_rp3.Name = "rdb_rp3";
-            this.rdb_rp3.Size = new System.Drawing.Size(49, 17);
-            this.rdb_rp3.TabIndex = 3;
-            this.rdb_rp3.TabStop = true;
-            this.rdb_rp3.Text = "2018";
-            this.rdb_rp3.UseVisualStyleBackColor = true;
-            this.rdb_rp3.Click += new System.EventHandler(this.btn_Next_Click);
-            // 
-            // rdb_rp4
-            // 
-            this.rdb_rp4.AutoSize = true;
-            this.rdb_rp4.Location = new System.Drawing.Point(93, 251);
-            this.rdb_rp4.Name = "rdb_rp4";
-            this.rdb_rp4.Size = new System.Drawing.Size(49, 17);
-            this.rdb_rp4.TabIndex = 4;
-            this.rdb_rp4.TabStop = true;
-            this.rdb_rp4.Text = "2020";
-            this.rdb_rp4.UseVisualStyleBackColor = true;
-            this.rdb_rp4.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // btn_Quit
             // 
@@ -173,11 +126,78 @@
             this.lbl_Name.TabIndex = 12;
             this.lbl_Name.Text = "Entrez votre nom :";
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(210, 245);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(110, 24);
+            this.lblScore.TabIndex = 13;
+            this.lblScore.Text = "Votre Score";
+            // 
+            // lbl_rp1
+            // 
+            this.lbl_rp1.AutoSize = true;
+            this.lbl_rp1.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_rp1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_rp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rp1.Location = new System.Drawing.Point(73, 186);
+            this.lbl_rp1.Name = "lbl_rp1";
+            this.lbl_rp1.Size = new System.Drawing.Size(51, 20);
+            this.lbl_rp1.TabIndex = 14;
+            this.lbl_rp1.Text = "label1";
+            this.lbl_rp1.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // lbl_rp2
+            // 
+            this.lbl_rp2.AutoSize = true;
+            this.lbl_rp2.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_rp2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_rp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rp2.Location = new System.Drawing.Point(73, 215);
+            this.lbl_rp2.Name = "lbl_rp2";
+            this.lbl_rp2.Size = new System.Drawing.Size(51, 20);
+            this.lbl_rp2.TabIndex = 15;
+            this.lbl_rp2.Text = "label1";
+            this.lbl_rp2.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // lbl_rp3
+            // 
+            this.lbl_rp3.AutoSize = true;
+            this.lbl_rp3.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_rp3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_rp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rp3.Location = new System.Drawing.Point(73, 245);
+            this.lbl_rp3.Name = "lbl_rp3";
+            this.lbl_rp3.Size = new System.Drawing.Size(51, 20);
+            this.lbl_rp3.TabIndex = 16;
+            this.lbl_rp3.Text = "label1";
+            this.lbl_rp3.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // lbl_rp4
+            // 
+            this.lbl_rp4.AutoSize = true;
+            this.lbl_rp4.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_rp4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_rp4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rp4.Location = new System.Drawing.Point(73, 275);
+            this.lbl_rp4.Name = "lbl_rp4";
+            this.lbl_rp4.Size = new System.Drawing.Size(51, 20);
+            this.lbl_rp4.TabIndex = 17;
+            this.lbl_rp4.Text = "label1";
+            this.lbl_rp4.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
             // Jeux
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 360);
+            this.Controls.Add(this.lbl_rp4);
+            this.Controls.Add(this.lbl_rp3);
+            this.Controls.Add(this.lbl_rp2);
+            this.Controls.Add(this.lbl_rp1);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.tbx_Name);
             this.Controls.Add(this.pbx4);
@@ -185,10 +205,6 @@
             this.Controls.Add(this.pbx2);
             this.Controls.Add(this.pbx1);
             this.Controls.Add(this.btn_Quit);
-            this.Controls.Add(this.rdb_rp4);
-            this.Controls.Add(this.rdb_rp3);
-            this.Controls.Add(this.rdb_rp2);
-            this.Controls.Add(this.rdb_rp1);
             this.Controls.Add(this.lbl_Question);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Jeux";
@@ -206,10 +222,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Question;
-        private System.Windows.Forms.RadioButton rdb_rp1;
-        private System.Windows.Forms.RadioButton rdb_rp2;
-        private System.Windows.Forms.RadioButton rdb_rp3;
-        private System.Windows.Forms.RadioButton rdb_rp4;
         private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.PictureBox pbx1;
         private System.Windows.Forms.PictureBox pbx2;
@@ -217,5 +229,10 @@
         private System.Windows.Forms.PictureBox pbx4;
         private System.Windows.Forms.TextBox tbx_Name;
         private System.Windows.Forms.Label lbl_Name;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lbl_rp1;
+        private System.Windows.Forms.Label lbl_rp2;
+        private System.Windows.Forms.Label lbl_rp3;
+        private System.Windows.Forms.Label lbl_rp4;
     }
 }

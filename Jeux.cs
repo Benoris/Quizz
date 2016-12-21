@@ -26,13 +26,27 @@ namespace Projet_Quizz
         public Jeux()
         {
             InitializeComponent();
-
+            lblScore.Visible = false;
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-
-            this.Close();
+            if (count + 1 >= listQuestion.Count)
+            {
+                List<List<object>> a = new List<List<object>>();
+                List<object> b = new List<object>();
+                b.Add(null);
+                b.Add(tbx_Name.Text);
+                b.Add(score);
+                a.Add(b);
+                models.WriteAnswersInDataBase("INSERT INTO `tuser` (`idUser`, `NameUser`, `Score`) VALUES", a);
+                this.Close();
+            }
+            else
+            {
+                this.Close();
+            }
+            
         }
 
         public void UpdateView()
@@ -43,28 +57,28 @@ namespace Projet_Quizz
             if (reponses[0][1].ToString().Length > 0)
             {
 
-                rdb_rp1.Visible = true;
-                rdb_rp2.Visible = true;
-                rdb_rp3.Visible = true;
-                rdb_rp4.Visible = true;
+                lbl_rp1.Visible = true;
+                lbl_rp2.Visible = true;
+                lbl_rp3.Visible = true;
+                lbl_rp4.Visible = true;
 
                 pbx1.Visible = false;
                 pbx2.Visible = false;
                 pbx3.Visible = false;
                 pbx4.Visible = false;
 
-                rdb_rp1.Text = reponses[0][1].ToString();
-                rdb_rp2.Text = reponses[1][1].ToString();
-                rdb_rp3.Text = reponses[2][1].ToString();
-                rdb_rp4.Text = reponses[3][1].ToString();
+                lbl_rp1.Text = reponses[0][1].ToString();
+                lbl_rp2.Text = reponses[1][1].ToString();
+                lbl_rp3.Text = reponses[2][1].ToString();
+                lbl_rp4.Text = reponses[3][1].ToString();
             }
             else
             {
 
-                rdb_rp1.Visible = false;
-                rdb_rp2.Visible = false;
-                rdb_rp3.Visible = false;
-                rdb_rp4.Visible = false;
+                lbl_rp1.Visible = false;
+                lbl_rp2.Visible = false;
+                lbl_rp3.Visible = false;
+                lbl_rp4.Visible = false;
 
                 pbx1.Visible = true;
                 pbx2.Visible = true;
@@ -94,50 +108,22 @@ namespace Projet_Quizz
             int s;
             int number = 0;
             char a;
+            string b;
 
             if (sender is PictureBox)
             {
                 s = (sender as PictureBox).Name.Length;
                 a = (sender as PictureBox).Name[s - 1];
-                number = Convert.ToInt32((sender as PictureBox).Name[s - 1]);
+                b = a.ToString();
+                number = Convert.ToInt32(b);
             }
-            else if (sender is RadioButton)
+            else if (sender is Label)
             {
-                s = (sender as RadioButton).Name.Length;
-                a = (sender as RadioButton).Name[s - 1];
-                number = Convert.ToInt32((sender as RadioButton).Name[s - 1]);
-                number = Convert.ToInt32(a);
+                s = (sender as Label).Name.Length;
+                a = (sender as Label).Name[s - 1];
+                b = a.ToString();
+                number = Convert.ToInt32(b);
             }
-/*
-            switch (number)
-            {
-                case 1:
-                    if ((bool)reponses[0][3])
-                    {
-                        score += ADDSCORE;
-                    }
-                    break;
-                case 2:
-                    if ((bool)reponses[1][3])
-                    {
-                        score += ADDSCORE;
-                    }
-                    break;
-                case 3:
-                    if ((bool)reponses[2][3])
-                    {
-                        score += ADDSCORE;
-                    }
-                    break;
-                case 4:
-                    if ((bool)reponses[3][3])
-                    {
-                        score += ADDSCORE;
-                    }
-                    break;
-                default:
-                    break;
-            }*/
 
             if ((bool)reponses[number - 1][3])
             {
@@ -157,20 +143,22 @@ namespace Projet_Quizz
             else
             {
                 lbl_Question.Text = "QUIZZ TERMINÉ!";
+                lblScore.Text = "Votre Score : " + score.ToString();
 
                 pbx1.Visible = false;
                 pbx2.Visible = false;
                 pbx3.Visible = false;
                 pbx4.Visible = false;
 
-                rdb_rp1.Visible = false;
-                rdb_rp2.Visible = false;
-                rdb_rp3.Visible = false;
-                rdb_rp4.Visible = false;
+                lbl_rp1.Visible = false;
+                lbl_rp2.Visible = false;
+                lbl_rp3.Visible = false;
+                lbl_rp4.Visible = false;
 
 
                 btn_Quit.Enabled = false;
 
+                lblScore.Visible = true;
                 lbl_Name.Visible = true;
                 tbx_Name.Visible = true;
             }

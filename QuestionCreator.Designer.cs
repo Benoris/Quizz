@@ -82,7 +82,7 @@
             this.tbx_Question.Multiline = true;
             this.tbx_Question.Name = "tbx_Question";
             this.tbx_Question.Size = new System.Drawing.Size(297, 69);
-            this.tbx_Question.TabIndex = 1;
+            this.tbx_Question.TabIndex = 0;
             this.tbx_Question.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // gb_Answer1
@@ -94,7 +94,7 @@
             this.gb_Answer1.Location = new System.Drawing.Point(15, 166);
             this.gb_Answer1.Name = "gb_Answer1";
             this.gb_Answer1.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer1.TabIndex = 2;
+            this.gb_Answer1.TabIndex = 6;
             this.gb_Answer1.TabStop = false;
             this.gb_Answer1.Text = "Reponse 1";
             // 
@@ -103,7 +103,7 @@
             this.btn_OpenImage1.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage1.Name = "btn_OpenImage1";
             this.btn_OpenImage1.Size = new System.Drawing.Size(115, 23);
-            this.btn_OpenImage1.TabIndex = 3;
+            this.btn_OpenImage1.TabIndex = 1;
             this.btn_OpenImage1.Text = "Sélectionner Image";
             this.btn_OpenImage1.UseVisualStyleBackColor = true;
             this.btn_OpenImage1.Click += new System.EventHandler(this.btn_OpenImage1_Click);
@@ -123,7 +123,7 @@
             this.tbx_Rep1.Multiline = true;
             this.tbx_Rep1.Name = "tbx_Rep1";
             this.tbx_Rep1.Size = new System.Drawing.Size(219, 55);
-            this.tbx_Rep1.TabIndex = 1;
+            this.tbx_Rep1.TabIndex = 0;
             this.tbx_Rep1.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep1
@@ -145,7 +145,7 @@
             this.cmb_QuestType.Location = new System.Drawing.Point(736, 60);
             this.cmb_QuestType.Name = "cmb_QuestType";
             this.cmb_QuestType.Size = new System.Drawing.Size(221, 21);
-            this.cmb_QuestType.TabIndex = 0;
+            this.cmb_QuestType.TabIndex = 1;
             this.cmb_QuestType.SelectedIndexChanged += new System.EventHandler(this.cmb_QuestType_SelectedIndexChanged);
             // 
             // rdb_CorrectAnswer2
@@ -154,7 +154,7 @@
             this.rdb_CorrectAnswer2.Location = new System.Drawing.Point(331, 143);
             this.rdb_CorrectAnswer2.Name = "rdb_CorrectAnswer2";
             this.rdb_CorrectAnswer2.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer2.TabIndex = 0;
+            this.rdb_CorrectAnswer2.TabIndex = 3;
             this.rdb_CorrectAnswer2.TabStop = true;
             this.rdb_CorrectAnswer2.Text = "Correcte";
             this.rdb_CorrectAnswer2.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@
             this.gb_Answer2.Location = new System.Drawing.Point(252, 166);
             this.gb_Answer2.Name = "gb_Answer2";
             this.gb_Answer2.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer2.TabIndex = 3;
+            this.gb_Answer2.TabIndex = 7;
             this.gb_Answer2.TabStop = false;
             this.gb_Answer2.Text = "Reponse 2";
             // 
@@ -177,7 +177,7 @@
             this.btn_OpenImage2.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage2.Name = "btn_OpenImage2";
             this.btn_OpenImage2.Size = new System.Drawing.Size(115, 23);
-            this.btn_OpenImage2.TabIndex = 7;
+            this.btn_OpenImage2.TabIndex = 1;
             this.btn_OpenImage2.Text = "Sélectionner Image";
             this.btn_OpenImage2.UseVisualStyleBackColor = true;
             this.btn_OpenImage2.Click += new System.EventHandler(this.btn_OpenImage2_Click);
@@ -197,7 +197,7 @@
             this.tbx_Rep2.Multiline = true;
             this.tbx_Rep2.Name = "tbx_Rep2";
             this.tbx_Rep2.Size = new System.Drawing.Size(219, 55);
-            this.tbx_Rep2.TabIndex = 5;
+            this.tbx_Rep2.TabIndex = 0;
             this.tbx_Rep2.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep2
@@ -217,7 +217,7 @@
             this.rdb_CorrectAnswer1.Location = new System.Drawing.Point(89, 143);
             this.rdb_CorrectAnswer1.Name = "rdb_CorrectAnswer1";
             this.rdb_CorrectAnswer1.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer1.TabIndex = 0;
+            this.rdb_CorrectAnswer1.TabIndex = 2;
             this.rdb_CorrectAnswer1.TabStop = true;
             this.rdb_CorrectAnswer1.Text = "Correcte";
             this.rdb_CorrectAnswer1.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@
             this.gb_Answer3.Location = new System.Drawing.Point(489, 166);
             this.gb_Answer3.Name = "gb_Answer3";
             this.gb_Answer3.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer3.TabIndex = 3;
+            this.gb_Answer3.TabIndex = 8;
             this.gb_Answer3.TabStop = false;
             this.gb_Answer3.Text = "Reponse 3";
             // 
@@ -240,7 +240,7 @@
             this.btn_OpenImage3.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage3.Name = "btn_OpenImage3";
             this.btn_OpenImage3.Size = new System.Drawing.Size(115, 23);
-            this.btn_OpenImage3.TabIndex = 7;
+            this.btn_OpenImage3.TabIndex = 1;
             this.btn_OpenImage3.Text = "Sélectionner Image";
             this.btn_OpenImage3.UseVisualStyleBackColor = true;
             this.btn_OpenImage3.Click += new System.EventHandler(this.btn_OpenImage3_Click);
@@ -260,7 +260,7 @@
             this.tbx_Rep3.Multiline = true;
             this.tbx_Rep3.Name = "tbx_Rep3";
             this.tbx_Rep3.Size = new System.Drawing.Size(219, 55);
-            this.tbx_Rep3.TabIndex = 5;
+            this.tbx_Rep3.TabIndex = 0;
             this.tbx_Rep3.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep3
@@ -279,7 +279,7 @@
             this.rdb_CorrectAnswer3.Location = new System.Drawing.Point(568, 143);
             this.rdb_CorrectAnswer3.Name = "rdb_CorrectAnswer3";
             this.rdb_CorrectAnswer3.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer3.TabIndex = 0;
+            this.rdb_CorrectAnswer3.TabIndex = 4;
             this.rdb_CorrectAnswer3.TabStop = true;
             this.rdb_CorrectAnswer3.Text = "Correcte";
             this.rdb_CorrectAnswer3.UseVisualStyleBackColor = true;
@@ -293,7 +293,7 @@
             this.gb_Answer4.Location = new System.Drawing.Point(726, 166);
             this.gb_Answer4.Name = "gb_Answer4";
             this.gb_Answer4.Size = new System.Drawing.Size(231, 411);
-            this.gb_Answer4.TabIndex = 3;
+            this.gb_Answer4.TabIndex = 9;
             this.gb_Answer4.TabStop = false;
             this.gb_Answer4.Text = "Reponse 4";
             // 
@@ -302,7 +302,7 @@
             this.btn_OpenImage4.Location = new System.Drawing.Point(9, 100);
             this.btn_OpenImage4.Name = "btn_OpenImage4";
             this.btn_OpenImage4.Size = new System.Drawing.Size(115, 23);
-            this.btn_OpenImage4.TabIndex = 7;
+            this.btn_OpenImage4.TabIndex = 1;
             this.btn_OpenImage4.Text = "Sélectionner Image";
             this.btn_OpenImage4.UseVisualStyleBackColor = true;
             this.btn_OpenImage4.Click += new System.EventHandler(this.btn_OpenImage4_Click);
@@ -322,7 +322,7 @@
             this.tbx_Rep4.Multiline = true;
             this.tbx_Rep4.Name = "tbx_Rep4";
             this.tbx_Rep4.Size = new System.Drawing.Size(219, 55);
-            this.tbx_Rep4.TabIndex = 5;
+            this.tbx_Rep4.TabIndex = 0;
             this.tbx_Rep4.TextChanged += new System.EventHandler(this.tbx_Rep1_TextChanged);
             // 
             // pb_Rep4
@@ -341,7 +341,7 @@
             this.rdb_CorrectAnswer4.Location = new System.Drawing.Point(806, 143);
             this.rdb_CorrectAnswer4.Name = "rdb_CorrectAnswer4";
             this.rdb_CorrectAnswer4.Size = new System.Drawing.Size(65, 17);
-            this.rdb_CorrectAnswer4.TabIndex = 0;
+            this.rdb_CorrectAnswer4.TabIndex = 5;
             this.rdb_CorrectAnswer4.TabStop = true;
             this.rdb_CorrectAnswer4.Text = "Correcte";
             this.rdb_CorrectAnswer4.UseVisualStyleBackColor = true;
@@ -352,7 +352,7 @@
             this.btn_AddQuestion.Location = new System.Drawing.Point(15, 584);
             this.btn_AddQuestion.Name = "btn_AddQuestion";
             this.btn_AddQuestion.Size = new System.Drawing.Size(936, 34);
-            this.btn_AddQuestion.TabIndex = 4;
+            this.btn_AddQuestion.TabIndex = 10;
             this.btn_AddQuestion.Text = "Ajouter question";
             this.btn_AddQuestion.UseVisualStyleBackColor = true;
             this.btn_AddQuestion.Click += new System.EventHandler(this.btn_AddQuestion_Click);
